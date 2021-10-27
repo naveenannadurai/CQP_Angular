@@ -1,0 +1,503 @@
+<!-- <div class="screen-title">Home</div>
+<br> -->
+<form>
+	<a name="top"></a>
+	<!-- Start - Manage Message Center - Show welcome message-->
+
+	<table width="870" align="center" border="0" cellpadding="0" cellspacing="0" class="FSB">
+		<tbody>
+			<tr>
+				<td class="alerthead2" align="left"><a name="List"></a>
+					<b>Alerts List :</b>
+				</td>
+				<td class="alerthead2" align="right">
+					<button valign="top" (click)="getAlerts()" type="submit" width="100px"
+						class="cqp-btn">Refresh</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Start - Voucher Alerts -->
+
+
+
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="4">
+		<tbody>
+			<tr bgcolor="#D3D9A4">
+				<td class="colheadactive" width="550">Alert: WRPs Not Submitted for Approval/No Issuer Assigned (WRPs in Initial Summary Status)</td>
+				<td class="colheadactive" align="left">
+					<button valign="top" (click)="export('Voucher')" type="submit" class="cqp-btn btn-space">Export details</button>
+				</td>
+				<td align="right"><a class="returntotop" href="javascript:showHide('ciplAlerts')"><img
+							id="ciplAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div id="voucherAlerts" style="display:block;" height="20">
+		<table width="870" align="center" border="1" cellspacing="1" cellpadding="4" class="sortable"
+			preserve_style="row">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" >WRP #</td>
+					<td class="colheadactive">WRP Title</td>
+					<td class="colheadactive">Created By</td>
+					<td class="colheadactive">WRP Issuer</td>
+				</tr>
+
+
+				<!-- <tr bgcolor="#F6F3B5" *ngFor="let d of vouchers" > -->
+				<tr bgcolor="#F6F3B5">
+					<td class="data"> </td>
+					<td class="data"></td>
+					<td class="data"></td>
+					<td class="data">Show WRPs with blank Issuer at top </td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+
+
+	<!-- Spacer Table -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td height="30"><img src="../../assets/clear.gif" width="1" height="1" border="0"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- End - Voucher Alerts -->
+
+
+
+
+
+	<!-- Start - CIPL Alerts -->
+
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="4">
+		<tbody>
+			<tr bgcolor="#D3D9A4">
+				<td class="colheadactive" width="550">Alert: WRPs Issued for Internal Approval (WRPs in Issued for Approval Status)</td>
+				<td class="colheadactive" align="left">
+					<button valign="top" (click)="export('Voucher')" type="submit" class="cqp-btn btn-space">Export details</button>
+				</td>
+				<td align="right"><a class="returntotop" href="javascript:showHide('ciplAlerts')"><img
+							id="ciplAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div id="ciplAlerts" style="display: block;" height="20">
+		<table width="870" align="center"  border="1" cellspacing="1" cellpadding="4" class="sortable"
+			preserve_style="row" id="call-in-table">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" >WRP #</td>
+					<td class="colheadactive">WRP Title</td>
+					<td class="colheadactive">WRP Issuer</td>
+					<td class="colheadactive">Approval Level</td>
+					<td class="colheadactive">Approver</td>
+					<td class="colheadactive"># of Days</td>
+				</tr>
+
+
+				<!-- <tr bgcolor="#F6F3B5" *ngFor="let d of callIn"> -->
+				<tr bgcolor="#F6F3B5">
+					<td class="data"> </td>
+					<td class="data"></td>
+					<td class="data"></td>
+					<td class="data">Show Approval Level Needing Approval</td>
+					<td class="data"></td>
+					<td class="data">WRP has been Waiting for Approval</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<!-- Spacer Table -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td height="30"><img src="../../assets/clear.gif" width="1" height="1" border="0"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- End - CIPL Alerts -->
+
+
+
+	<!-- Start - TPL Alerts -->
+
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="4">
+		<tbody>
+			<tr bgcolor="#D3D9A4">
+				<td class="colheadactive" width="550">Alert: WRPs Ready to Send to Supplier (WRPs in Approved Status)</td>
+				<td class="colheadactive" align="left">
+					<button valign="top" (click)="export('Voucher')" type="submit" class="cqp-btn btn-space">Export details</button>
+
+				</td>
+				<td align="right"><a class="returntotop" href="javascript:showHide('tplAlerts')"><img id="tplAlertImage"
+							title="Hide" src="../../assets/hide.gif" border="0"></a></td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="tplAlerts" style="display: block;" height="20">
+		<table width="870" align="center" border="0" cellspacing="1" cellpadding="4&quot;" class="sortable"
+			preserve_style="row" id="tpl-table">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" >WRP #</td>
+					<td class="colheadactive">WRP Title</td>
+					<td class="colheadactive">WRP Issuer</td>
+					<td class="colheadactive">Supplier Name</td>
+					<td class="colheadactive">Supplier Number</td>
+				</tr>
+
+
+				<!-- <tr bgcolor="#F6F3B5" *ngFor="let d of tpl"> -->
+				<tr bgcolor="#F6F3B5">
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+				</tr>
+
+			</tbody>
+		</table>
+
+
+
+
+	</div>
+<br>
+
+	<table _ngcontent-wju-c5="" align="center" border="0" cellpadding="4" cellspacing="0" width="870">
+		<tbody _ngcontent-wju-c5="">
+			<tr _ngcontent-wju-c5="" bgcolor="#D3D9A4">
+				<td _ngcontent-wju-c5="" class="colheadactive" width="550">Alert: WRP Internal Approval Rejected (WRPs in Approval Rejected Status)</td>
+				<td _ngcontent-wju-c5="" align="left" class="colheadactive">
+					<button valign="top" (click)="export('Voucher')" type="submit" class="cqp-btn btn-space">Export details</button>
+				</td>
+				<td align="right">&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div id="tplAlerts" style="display: block;" height="20">
+		<table width="870" align="center"  border="1" cellspacing="1" cellpadding="4&quot;" class="sortable"
+			preserve_style="row" id="tpl-table">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" >WRP #</td>
+					<td class="colheadactive">WRP Title</td>
+					<td class="colheadactive">WRP Issuer</td>
+					<td class="colheadactive">Approval Level</td>
+					<td class="colheadactive">Approver</td>
+					<td class="colheadactive">Notes</td>
+					<td class="colheadactive"># of days</td>
+				</tr>
+
+
+				<!-- <tr bgcolor="#F6F3B5" *ngFor="let d of tplDue"> -->
+				<tr bgcolor="#F6F3B5">
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data">Approval Level who rejected WRP </td>
+					<td class="data">Name </td>
+					<td class="data"> </td>
+					<td class="data">Since WRP was rejected </td>
+				</tr>
+
+			</tbody>
+		</table>
+
+
+
+
+	</div>
+	<!-- Spacer Table -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td height="30"><img src="../../assets/clear.gif" width="1" height="1" border="0"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- End - TPL Alerts -->
+
+	<!-- Start - User Role Alerts -->
+
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="4&quot;">
+		<tbody>
+			<tr bgcolor="#D3D9A4">
+				<td class="colheadactive" width="550">Alert: Issued to Supplier for Approval (WRPs in Issued to Supplier Status)</td>
+				<td class="colheadactive" align="left">
+					<button valign="top" (click)="export('Voucher')" type="submit" class="cqp-btn btn-space">Export details</button>
+				</td>
+				<td align="right"><a class="returntotop" href="javascript:showHide('userAlerts')"><img
+							id="userAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a></td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="userAlerts" style="display: block;" height="20">
+		<table width="870" align="center"  border="1" cellspacing="1" cellpadding="4" id="user-table">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" >WRP #</td>
+					<td class="colheadactive">WRP Title</td>
+					<td class="colheadactive">WRP Issuer</td>
+					<td class="colheadactive">Supplier Name</td>
+					<td class="colheadactive">Supplier Number</td>
+					<td class="colheadactive">Supplier Contact</td>
+					<td class="colheadactive">Supplier Email</td>
+					<td class="colheadactive"># of Days</td>
+					
+				</tr>
+
+
+				<!-- <tr bgcolor="#F6F3B5" *ngFor="let d of tpl"> -->
+				<tr bgcolor="#F6F3B5">
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data">Since Issuing</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<!-- Spacer Table -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td height="30"><img src="../../assets/clear.gif" width="1" height="1" border="0"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- End - User Role Alerts -->
+
+
+
+	<!-- Start - Voucher Cost details -->
+
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="4&quot;">
+		<tbody>
+			<tr bgcolor="#D3D9A4">
+				<td class="colheadactive" width="550">Alert: Negotiations Requested (WRPs in Negotiations Requested Status)</td>
+				<td class="colheadactive" align="left">
+					<button valign="top" (click)="export('Voucher')" type="submit" class="cqp-btn btn-space">Export details</button>
+				</td>
+				<td align="right"><a class="returntotop" href="javascript:showHide('voucherCostAlerts')"><img
+							id="voucherCostAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a></td>
+			</tr>
+
+		</tbody>
+	</table>
+	<div id="voucherCostAlerts" style="display: block;" height="20">
+		<table width="870" align="center"  border="1" cellspacing="1" cellpadding="4" id="voucher-amount-table">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" >WRP #</td>
+					<td class="colheadactive">WRP Title</td>
+					<td class="colheadactive">WRP Issuer</td>
+					<td class="colheadactive">Supplier Name</td>
+					<td class="colheadactive">Supplier Number</td>
+					<td class="colheadactive">Supplier Contact</td>
+					<td class="colheadactive">Supplier Email</td>
+					<td class="colheadactive">Supplier Notes</td>
+					<td class="colheadactive"># of Days</td>
+					
+				</tr>
+
+
+				<!-- <tr bgcolor="#F6F3B5" *ngFor="let d of tpl"> -->
+				<tr bgcolor="#F6F3B5">
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data">Since Supplier Requested Negotiations</td>
+				</tr>
+
+
+			</tbody>
+		</table>
+	</div>
+	<!-- Spacer Table -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td height="30"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- End - Voucher Cost -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="4&quot;">
+		<tbody>
+			<tr bgcolor="#D3D9A4">
+				<td class="colheadactive" width="550">Alert: Ready To Submit Initial Voucher (WRPs In Supplier Approved Status)</td>
+				<td class="colheadactive" align="left">
+					<button valign="top" (click)="export('Voucher')" type="submit" class="cqp-btn btn-space">Export details</button>
+				</td>
+				<td align="right"><a class="returntotop" href="javascript:showHide('voucherCostAlerts')"><img
+							id="voucherCostAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a></td>
+			</tr>
+
+		</tbody>
+	</table>
+	<div id="voucherCostAlerts" style="display: block;" height="20">
+		<table width="870" align="center"  border="1" cellspacing="1" cellpadding="4" id="voucher-amount-table">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive">WRP #</td>
+					<td class="colheadactive">WRP Title</td>
+					<td class="colheadactive">WRP Issuer</td>
+					<td class="colheadactive">Supplier Name</td>
+					<td class="colheadactive">Supplier Number</td>
+					<td class="colheadactive"># of Days</td>
+					
+				</tr>
+
+
+				<!-- <tr bgcolor="#F6F3B5" *ngFor="let d of tpl"> -->
+				<tr bgcolor="#F6F3B5">
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data">Since Supplier Approved </td>
+				</tr>
+
+
+			</tbody>
+		</table>
+	</div>
+	<!-- Spacer Table -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td height="30"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- End - Voucher Cost -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="4&quot;">
+		<tbody>
+			<tr bgcolor="#D3D9A4">
+				<td class="colheadactive" width="550">Alert: Active Manual Voucher (WRPs in Active Manual Voucher Status)</td>
+				<td class="colheadactive" align="left">
+					<button valign="top" (click)="export('Voucher')" type="submit" class="cqp-btn btn-space">Export details</button>
+				</td>
+				<td align="right"><a class="returntotop" href="javascript:showHide('voucherCostAlerts')"><img
+							id="voucherCostAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a></td>
+			</tr>
+
+		</tbody>
+	</table>
+	<div id="voucherCostAlerts" style="display: block;" height="20">
+		<table width="870" align="center"  border="1" cellspacing="1" cellpadding="4" id="voucher-amount-table">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" >WRP #</td>
+					<td class="colheadactive">WRP Title</td>
+					<td class="colheadactive">WRP Issuer</td>
+					<td class="colheadactive">Supplier Name</td>
+					<td class="colheadactive">Supplier Number</td>
+					<td class="colheadactive">Date Last WRP Was Issued? </td>
+					
+				</tr>
+
+
+				<!-- <tr bgcolor="#F6F3B5" *ngFor="let d of tpl"> -->
+				<tr bgcolor="#F6F3B5">
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+				</tr>
+
+
+			</tbody>
+		</table>
+	</div>
+	<br>
+	<!-- Spacer Table -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td height="30"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- End - Voucher Cost -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="4&quot;">
+		<tbody>
+			<tr bgcolor="#D3D9A4">
+				<td class="colheadactive" width="550">Alert: Active Monthly Voucher (WRPs in Active Monthly Voucher)</td>
+				<td class="colheadactive" align="left">
+					<button valign="top" (click)="export('Voucher')" type="submit" class="cqp-btn btn-space">Export details</button>
+				</td>
+				<td align="right"><a class="returntotop" href="javascript:showHide('voucherCostAlerts')"><img
+							id="voucherCostAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a></td>
+			</tr>
+
+		</tbody>
+	</table>
+	<div id="voucherCostAlerts" style="display: block;" height="20">
+		<table width="870" align="center"  border="1" cellspacing="1" cellpadding="4" id="voucher-amount-table">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" >WRP #</td>
+					<td class="colheadactive">WRP Title</td>
+					<td class="colheadactive">WRP Issuer</td>
+					<td class="colheadactive">Supplier Name</td>
+					<td class="colheadactive">Supplier Number</td>
+					<td class="colheadactive">Date Last WRP Was Issued?</td>
+					
+				</tr>
+
+
+				<!-- <tr bgcolor="#F6F3B5" *ngFor="let d of tpl"> -->
+				<tr bgcolor="#F6F3B5">
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					<td class="data"> </td>
+					
+				</tr>
+
+
+			</tbody>
+		</table>
+	</div>
+
+
+
+</form>

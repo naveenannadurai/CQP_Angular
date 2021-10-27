@@ -1,0 +1,375 @@
+<!-- <div class="screen-title">Home</div>
+<br> -->
+
+<form>
+	<a name="top"></a>
+	<!-- Start - Manage Message Center - Show welcome message-->
+
+	<table width="970" align="center" border="0" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td>
+					<table border="0" width="970" align="center" cellspacing="0" cellpadding="0" bordercolor="#000000">
+						<tbody>
+							<tr>
+								<td class="alerthead2" width="365"><a name="Sort"></a><b>Inbox :</b></td>
+
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<table width="970" align="center" border="0" cellpadding="0" cellspacing="0">
+						<tbody>
+							<tr></tr>
+							<tr>
+								<td width="50%" class="data">
+									Name :
+									Test&nbsp;
+									User 145&nbsp;/&nbsp;
+									VCC74145
+								</td>
+								<td class="data" width="50%" align="right">
+									Alerts as of :
+									Wednesday, April 28th, 2021 06:11 am
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<hr style='margin-top:0em; margin-bottom: 0em;background-color: grey;' />
+	<table width="970" align="center" border="0" cellspacing="0" cellpadding="0" height="18">
+		<tbody>
+			<tr>
+				<td height="1" class="alerthead2"><b>Welcome Message:</b></td>
+			</tr>
+			<tr *ngFor="let s of inbox">
+				<td height="1" class="alertRed" style="color: #CC0000;font-weight: bold;">
+					{{s.message}}<br>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<hr style="margin-top:0em; background-color: grey;" />
+	<table width="870" align="center" border="0" cellpadding="0" cellspacing="0" class="FSB">
+		<tbody>
+			<tr>
+				<td class="alerthead2" align="left"><a name="List"></a>
+					<b>Alerts List :</b>
+				</td>
+				<td class="alerthead2" align="right">
+					<button valign="top" (click)="getAlerts()" type="submit" width="100px"
+						class="cqp-btn">Refresh</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Start - Voucher Alerts -->
+
+
+
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="4">
+		<tbody>
+			<tr bgcolor="#D3D9A4">
+				<td class="colheadactive" width="550">Alert Type: Voucher</td>
+				<td class="colheadactive" align="left">
+					<button valign="top" (click)="export('Voucher')" type="submit" class="cqp-btn btn-space">Export
+						details
+						- Voucher</button>
+				</td>
+				<td align="right"><a class="returntotop" href="javascript:showHide('ciplAlerts')"><img
+							id="ciplAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div id="voucherAlerts" style="display:block;" height="20">
+		<table width="870" align="center" border="1" cellspacing="1" cellpadding="4" class="sortable"
+			preserve_style="row">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" width="500">Supplier</td>
+					<td class="colheadactive">Status</td>
+					<td class="colheadactive">Alert Text</td>
+				</tr>
+
+
+				<tr bgcolor="#F6F3B5" *ngFor="let d of vouchers" >
+					<td class="data">{{d.suppNo}} </td>
+					<td class="data">{{d.status}}</td>
+					<td class="data">{{d.itemText}}</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+
+
+	<!-- Spacer Table -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td height="30"><img src="../../assets/clear.gif" width="1" height="1" border="0"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- End - Voucher Alerts -->
+
+
+
+
+
+	<!-- Start - CIPL Alerts -->
+
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="4">
+		<tbody>
+			<tr bgcolor="#D3D9A4">
+				<td class="colheadactive" width="550">Alert Type: Call-In</td>
+				<td class="colheadactive" align="left">
+					<button valign="top" (click)="export('CallIn')" type="submit" class="cqp-btn btn-space">Export
+						details -
+						Call-In</button>
+				</td>
+				<td align="right"><a class="returntotop" href="javascript:showHide('ciplAlerts')"><img
+							id="ciplAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div id="ciplAlerts" style="display: block;" height="20">
+		<table width="870" align="center" border="1" cellspacing="1" cellpadding="4" class="sortable"
+			preserve_style="row" id="call-in-table">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" width="500">Supplier</td>
+					<td class="colheadactive">Status</td>
+					<td class="colheadactive">Alert Text</td>
+				</tr>
+
+
+				<tr bgcolor="#F6F3B5" *ngFor="let d of callIn">
+					<td class="data">{{d.suppNo}} </td>
+					<td class="data">{{d.status}}</td>
+					<td class="data">{{d.itemText}}</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<!-- Spacer Table -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td height="30"><img src="../../assets/clear.gif" width="1" height="1" border="0"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- End - CIPL Alerts -->
+
+
+
+	<!-- Start - TPL Alerts -->
+
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="4">
+		<tbody>
+			<tr bgcolor="#D3D9A4">
+				<td class="colheadactive" width="550">Alert Type: TPL</td>
+				<td class="colheadactive" align="left">
+					<button valign="top" (click)="export('TPL')" type="submit" class="cqp-btn btn-space">Export details
+						-
+						TPL</button>
+
+				</td>
+				<td align="right"><a class="returntotop" href="javascript:showHide('tplAlerts')"><img id="tplAlertImage"
+							title="Hide" src="../../assets/hide.gif" border="0"></a></td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="tplAlerts" style="display: block;" height="20">
+		<table width="870" align="center" border="1" cellspacing="1" cellpadding="4&quot;" class="sortable"
+			preserve_style="row" id="tpl-table">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" width="500">Supplier</td>
+					<td class="colheadactive" >Status</td>
+					<td class="colheadactive">Alert Text</td>
+				</tr>
+
+
+				<tr bgcolor="#F6F3B5" *ngFor="let d of tpl">
+					<td class="data">{{d.suppNo}} </td>
+					<td class="data">{{d.status}}</td>
+					<td class="data">{{d.itemText}}</td>
+				</tr>
+
+			</tbody>
+		</table>
+
+
+
+
+	</div>
+
+
+	<table _ngcontent-wju-c5="" align="center" border="0" cellpadding="4" cellspacing="0" width="870">
+		<tbody _ngcontent-wju-c5="">
+			<tr _ngcontent-wju-c5="" bgcolor="#D3D9A4">
+				<td _ngcontent-wju-c5="" class="colheadactive" width="550">TPLs Due within 3 business days</td>
+				<td _ngcontent-wju-c5="" align="left" class="colheadactive">&nbsp;</td>
+				<td align="right">&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div id="tplAlerts" style="display: block;" height="20">
+		<table width="870" align="center" border="0" cellspacing="1" cellpadding="4&quot;" class="sortable"
+			preserve_style="row" id="tpl-table">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" width="500">Supplier</td>
+					<td class="colheadactive" >Status</td>
+					<td class="colheadactive">Alert Text</td>
+				</tr>
+
+
+				<tr bgcolor="#F6F3B5" *ngFor="let d of tplDue">
+					<td class="data">{{d.suppNo}} </td>
+					<td class="data">{{d.status}}</td>
+					<td class="data">{{d.itemText}}</td>
+				</tr>
+
+			</tbody>
+		</table>
+
+
+
+
+	</div>
+	<!-- Spacer Table -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td height="30"><img src="../../assets/clear.gif" width="1" height="1" border="0"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- End - TPL Alerts -->
+
+	<!-- Start - User Role Alerts -->
+
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="4&quot;">
+		<tbody>
+			<tr bgcolor="#D3D9A4">
+				<td class="colheadactive" width="550">Alert Type: User</td>
+				<td class="colheadactive" align="left">
+					<button valign="top" (click)="export('User')" type="submit" class="cqp-btn btn-space">Export details
+						-
+						User</button>
+				</td>
+				<td align="right"><a class="returntotop" href="javascript:showHide('userAlerts')"><img
+							id="userAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a></td>
+			</tr>
+		</tbody>
+	</table>
+	<div id="userAlerts" style="display: block;" height="20">
+		<table width="870" align="center" border="1" cellspacing="1" cellpadding="4" id="user-table">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" colspan="2">Alert Text</td>
+				</tr>
+
+
+				<tr bgcolor="#F6F3B5" *ngFor="let ww of user">
+					<td class="data" colspan="2">{{ww.itemText}}</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<!-- Spacer Table -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td height="30"><img src="../../assets/clear.gif" width="1" height="1" border="0"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- End - User Role Alerts -->
+
+
+
+	<!-- Start - Voucher Cost details -->
+
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="4&quot;">
+		<tbody>
+			<tr bgcolor="#D3D9A4">
+				<td class="colheadactive" width="550">Alert Type: Voucher With
+					Amount Zero</td>
+				<td class="colheadactive" align="left">
+					<button valign="top" (click)="export('VoucherCost')" type="submit" class="cqp-btn btn-space">Export
+						details - Voucher Amounts</button>
+				</td>
+				<td align="right"><a class="returntotop" href="javascript:showHide('voucherCostAlerts')"><img
+							id="voucherCostAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a></td>
+			</tr>
+
+		</tbody>
+	</table>
+	<div id="voucherCostAlerts" style="display: block;" height="20">
+		<table width="870" align="center" border="1" cellspacing="1" cellpadding="4" id="voucher-amount-table">
+			<tbody>
+				<tr bgcolor="#D3D9A4">
+					<td class="colheadactive" width="40%">Supplier</td>
+					<td class="colheadactive" width="15%">Part No.</td>
+					<td class="colheadactive" width="15%">MODEL_NAME</td>
+					<td class="colheadactive" width="15%">MODEL_YEAR</td>
+					<td class="colheadactive" width="15%">FOB_AMT</td>
+					<td class="colheadactive" width="15%">DEALER_NET_AMT</td>
+					<td class="colheadactive" width="15%">FLAT_RATE_AMT</td>
+				</tr>
+
+
+
+				<tr bgcolor="#F6F3B5">
+					<td class="data" width="40%">-Missing Part Cost Info</td>
+					<td class="data" width="15%">--</td>
+					<td class="data" width="15%">--</td>
+					<td class="data" width="15%">--</td>
+					<td class="data" width="15%">0.00</td>
+					<td class="data" width="15%">0.00</td>
+					<td class="data" width="15%">0.00</td>
+				</tr>
+
+
+			</tbody>
+		</table>
+	</div>
+	<!-- Spacer Table -->
+	<table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td height="30"></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- End - Voucher Cost -->
+
+
+
+
+
+</form>

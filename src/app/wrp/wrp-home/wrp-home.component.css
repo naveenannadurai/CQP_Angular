@@ -1,0 +1,12 @@
+.btn-space {
+    margin-right: 1px;
+    margin-bottom: 4px;
+    width: 190px;
+}
+
+tr:nth-child(even){
+    background-color: #F6F3B5;
+}
+table{
+border-color: white;
+}

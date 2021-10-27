@@ -1,0 +1,1120 @@
+<!-- <div class="screen-title">
+    Transfer Part List - Current
+</div>
+<br>
+ -->
+
+ <ng-container *ngIf="outer">
+<div class="panel panel-primary">
+    <table width="970" align="center" border="0" cellspacing="0" cellpadding="0">
+
+        <tbody>
+            <tr>
+                <td class="alerthead2">Search for Transfer Part List items:</td>
+            </tr>
+            <tr>
+                <td class="details" colspan="2">Provide criteria to search for Transfer Part List items</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="0" width="970" cellpadding="4" cellspacing="0" class="supplier-panel-body">
+        <tbody>
+            &nbsp;
+            <tr>
+                <td width="2%">Supplier:</td>
+                <td width="45">
+                    <select #s (change)="callSupplier(s.value)" style="width: 30%;">
+                        <option *ngFor="let supplier of suppliers" value="{{supplier.supplierNo}}">
+                            {{supplier.supplierNo}}
+                            {{supplier.supplierName}}</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table width="970" align="center" border="0" cellpadding="2" cellspacing="0">
+        <tbody>
+            <tr>
+                <td width="16%" class="data">TPL Item Status:</td>
+                <td width="24%" class="data">Short Part No:</td>
+                <td width="18%" class="data">Model Year:</td>
+                <td width="18%" class="data">Model Name:</td>
+                <td width="24%" class="data" colspan="2">Category:</td>
+            </tr>
+            <tr>
+                <td width="25%" class="data" valign="top"><select name="status_name" class="data">
+                        <option value="ALL" selected="selected">ALL</option>
+
+                        <option value="NEW">NEW</option>
+                        <option value="ACTIVE">ACTIVE</option>
+                        <option value="AWAIT_EXTENSION">AWAIT_EXTENSION</option>
+                        <option value="AVAILABLE_FOR_REVIEW">AVAILABLE_FOR_REVIEW</option>
+                        <option value="READY_FOR_VOUCHER">READY_FOR_VOUCHER</option>
+                        <option value="REOPENED_FOR_ANALYSIS">REOPENED_FOR_ANALYSIS</option>
+                        <option value="VOUCHERED">VOUCHERED</option>
+                        <option value="REQUIRES_REVIEW">REQUIRES_REVIEW</option>
+                    </select></td>
+                <td class="data" valign="top"><select name="part_no" style="width: 200px" class="data">
+                        <option value="ALL" selected="selected">ALL</option>
+
+                        <option value="39540">39540-DVD UNIT, NAVIGATOR</option>
+                        <option value="39710">39710-HARN, INSTRUMENT</option>
+                    </select></td>
+                <td><select name="modelYear" class="data">
+                        <option value="ALL" selected="selected">ALL</option>
+
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                    </select></td>
+                <td><select name="modelName" class="data">
+                        <option value="ALL" selected="selected">ALL</option>
+
+                        <option value="ACCORD">ACCORD</option>
+                        <option value="MDX">MDX</option>
+                        <option value="ODYSSEY">ODYSSEY</option>
+                        <option value="PASSPORT">PASSPORT</option>
+                        <option value="PILOT">PILOT</option>
+                        <option value="RDX">RDX</option>
+                        <option value="TLX">TLX</option>
+                    </select></td>
+                <td colspan="2" valign="top" class="data"><select name="categoryName" style="width: 220px" class="data">
+                        <option value="ALL" selected="selected">ALL</option>
+
+                        <option value="0">NO-CATEGORY</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="data" height="20"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="8">
+                </td>
+            </tr>
+            <tr>
+                <td class="data">Conclusion:</td>
+                <td class="data">Due Date Range:</td>
+                <td class="data">Submitted Date Range:</td>
+                <td class="data">Assembly Off. Date:</td>
+                <td class="data">TPL Ref. No.</td>
+                <td class="data">Claim No.</td>
+            </tr>
+            <tr>
+                <td valign="top" class="data"><select name="conclusionName" class="data">
+                        <option value="ALL" selected="selected">ALL</option>
+
+                        <option value="1">Customer abuse</option>
+                        <option value="2">Dealer Error</option>
+                        <option value="3">Supplier Mfg. Defect</option>
+                        <option value="4">NTF</option>
+                        <option value="5">Honda Mfg. Defect</option>
+                        <option value="6">Cause Unknown</option>
+                        <option value="8">Spec. Related-Honda Drawing</option>
+                        <option value="9">Spec. Related-Supplier Drawing</option>
+                        <option value="12">Honda Supplied Part</option>
+                        <option value="13">No Reply</option>
+                        <option value="14">Systems Related</option>
+                    </select></td>
+                <td>
+                    <table border="0">
+                        <tbody>
+                            <tr>
+                                <td class="data">From:</td>
+                                <td class="data">
+                                    <input type="date" name="" id="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="data">To:</td>
+                                <td class="data">
+                                    <input type="date" name="" id="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table border="0">
+                        <tbody>
+                            <tr>
+                                <td class="data">From:</td>
+                                <td class="data">
+                                    <input type="date" name="" id="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="data">To:</td>
+                                <td class="data">
+                                    <input type="date" name="" id="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td>
+                    <table border="0">
+                        <tbody>
+                            <tr>
+                                <td class="data">From:</td>
+                                <td class="data">
+                                    <input type="date" name="" id="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="data">To:</td>
+                                <td class="data">
+                                    <input type="date" name="" id="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td valign="top"><input type="text" name="tplRefNo" maxlength="10" size="10" value="" class="data"></td>
+                <td valign="top"><input type="text" name="claimNo" maxlength="10" size="10" value="" class="data"></td>
+            </tr>
+            <tr>
+                <td colspan="6" class="data"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="4"></td>
+            </tr>
+            <!-- Start - Enhancement - Add PWG review checkbox -->
+
+            <tr>
+                <td class="data" align="left" colspan="1">Reviewed</td>
+                <td class="data" align="left" colspan="1">Market</td>
+            </tr>
+            <tr>
+                <td class="data" align="left" colspan="1"><select name="pwgReviewedSrch" class="data">
+                        <option value="ALL" selected="selected">ALL</option>
+                        <option value="Y">Reviewed</option>
+                        <option value="N">Not Reviewed</option>
+                    </select></td>
+                <td class="data" align="left" colspan="1"><select name="selectedMarket" class="data">
+                        <option value="All">All</option>
+                        <option value="KA/KL">KA/KL</option>
+                        <option value="KC">KC</option>
+                    </select></td>
+
+            </tr>
+            <tr>
+                <td align="right" colspan="6"><button (click)="toggle()" class="cqp-btn">Search</button> &nbsp;
+                    &nbsp;<button type="reset" class="cqp-btn">Reset</button> &nbsp; &nbsp;<button
+                        class="cqp-btn">Create</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="supplier-panel-body">
+        <ng-container *ngIf="show">
+            <hr />
+
+            <div class="panel-body">
+                <table border="0" width="970" align="center" cellspacing="0" ellpadding="0" bordercolor="#000000">
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="alerthead2">List of Transfer Part List Items:</td>
+                        </tr>
+                        <tr>
+                            <td width="60%" colspan="4" class="data">Click on a record to see the details below or
+                                select desired records and an action to perform on them.</td>
+                        </tr>
+
+                        <tr>
+                            <td width="50%" class="data">Supplier:&nbsp;&nbsp; 011620 ALPINE ELECTRONICS OF AMERICA</td>
+                            <td class="data" align="left"></td>
+                            <td width="38%" align="right" class="recordnumber">41 records</td>
+                            <td width="12%" align="center" class="data">
+                                &nbsp; <select name="listPageSelector" onchange="submitAction('gotoPageForListcq')"
+                                    class="data">
+                                    <option value="1" selected="selected">1</option>
+
+                                    <option value="2">2</option>
+
+                                    <option value="3">3</option>
+                                </select> <a href="">Next</a>
+
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <table class="table table-striped" cellspacing="1" cellpadding="4" bordercolor="white" border="6">
+                    <thead>
+                        <tr class="list-header" height="20%">
+                            <th></th>
+                            <th>Status</th>
+                            <th>TPL Ref. No.</th>
+                            <th>Short Part No.</th>
+                            <th>Seq. No.</th>
+                            <th>Model Year</th>
+                            <th>Model Name</th>
+                            <th>Pickup Date</th>
+                            <th>Due Date</th>
+                            <th>Reopen Due Date</th>
+                            <th>Dealer No</th>
+                            <th>Claim No</th>
+                            <th>ROYR </th>
+                            <th>Conclusion</th>
+                            <th>Mkt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        <tr bgcolor="#F6F3B5" bordercolor="#FFFFFF">
+
+                            <td>
+
+                                <input type="checkbox" name="checkedPartno" value="0">
+                            </td>
+                            <!--Start - Enhancement - Highlight links after reviewing-->
+                            <td><a class="allLinkData"  (click)="toggle1()">
+                                    NEW</a></td>
+                            <!--End - Enhancement - Highlight links after reviewing-->
+                            <td align="right">
+                                <script>tplRefNoArray[cnt++] = '774407';</script>774407
+                            </td>
+                            <td align="right">33500</td>
+                            <td align="right">1/1</td>
+                            <td align="right">2020</td>
+                            <td>CRV</td>
+                            <td>01/11/2021</td>
+                            <td>02/08/2021</td>
+                            <td></td>
+                            <td align="right">206698</td>
+                            <td align="right">069264</td>
+                            <td align="right">2020</td>
+                            <td align="left"></td>
+                            <td align="left">KA</td>
+                        </tr>
+
+                        <tr bgcolor="#FFFFFF" bordercolor="#FFFFFF">
+
+                            <td>
+
+                                <input type="checkbox" name="checkedPartno" value="1">
+                            </td>
+                            <!--Start - Enhancement - Highlight links after reviewing-->
+                            <td><a class="allLinkData" (click)="toggle1()">
+                                    NEW</a></td>
+                            <!--End - Enhancement - Highlight links after reviewing-->
+                            <td align="right">
+                                <script>tplRefNoArray[cnt++] = '774408';</script>774408
+                            </td>
+                            <td align="right">33150</td>
+                            <td align="right">1/1</td>
+                            <td align="right">2020</td>
+                            <td>ACCORD</td>
+                            <td>01/11/2021</td>
+                            <td>02/08/2021</td>
+                            <td></td>
+                            <td align="right">207811</td>
+                            <td align="right">774160</td>
+                            <td align="right">2020</td>
+                            <td align="left"></td>
+                            <td align="left">KA</td>
+                        </tr>
+
+                        <tr bgcolor="#F6F3B5" bordercolor="#FFFFFF">
+
+                            <td>
+
+                                <input type="checkbox" name="checkedPartno" value="2">
+                            </td>
+                            <!--Start - Enhancement - Highlight links after reviewing-->
+                            <td><a class="allLinkData"  (click)="toggle1()">
+                                    NEW</a></td>
+                            <!--End - Enhancement - Highlight links after reviewing-->
+                            <td align="right">
+                                <script>tplRefNoArray[cnt++] = '774409';</script>774409
+                            </td>
+                            <td align="right">33500</td>
+                            <td align="right">1/1</td>
+                            <td align="right">2020</td>
+                            <td>CRV</td>
+                            <td>01/11/2021</td>
+                            <td>02/08/2021</td>
+                            <td></td>
+                            <td align="right">208229</td>
+                            <td align="right">701751</td>
+                            <td align="right">2020</td>
+                            <td align="left"></td>
+                            <td align="left">KA</td>
+                        </tr>
+                        <!-- <tr *ngFor="let tplitem of tplitems | async" class="list-row">
+                            <td><input type="checkbox" name="checkedPartno" value="0"></td>
+                            <td align="margin-left">{{findBySpecField(statues, 'statusId', tplitem.statusId,
+                                'statusName')}}
+                            </td> -->
+                        <!-- <td align="margin-left">{{tplitem.statusId}}</td> -->
+
+                        <!-- <td align="margin-left">{{tplitem.itemDetailId}}</td>
+                            <td align="margin-left">{{tplitem.detailId}}</td>
+                            <td align="margin-left">{{tplitem.sequenceNo}}</td>
+                            <td align="margin-left">2012</td>
+                            <td align="margin-left">CRV</td>
+                            <td align="margin-left">{{tplitem.lastUpdatedDate | date:'shortDate'}}</td>
+                            <td align="margin-left">{{tplitem.dueDate | date:'shortDate'}}</td>
+                            <td align="margin-left">{{tplitem.reopenedDueDate | date:'shortDate'}}</td>
+                            <td align="margin-left">12345</td>
+                            <td align="margin-left">710710</td>
+                            <td align="margin-left">2016</td> -->
+                        <!-- <td align="margin-left">{{tplitem.conclusionId}}</td> -->
+                        <!-- <td align="margin-left">
+                                {{findBySpecField(conclusions, 'conclusionId', tplitem.conclusionId, 'conclusionDesc')}}
+                            </td>
+                            <td align="margin-left">KA</td>
+                            <td><input type="checkbox" name="checkedPartno" value="0"></td>
+
+                        </tr> -->
+                    </tbody>
+                </table>
+                <table width="970" align="center" border="0" cellpadding="0" cellspacing="0">
+					<tbody><tr>
+						<td height="4"><img src="/cqp_qa/cqpq/images/clear.gif" width="1%" height="1" border="0"></td>
+					</tr>
+					<tr>
+						
+							<td style="padding-left: 3; padding-top: 3; padding-bottom: 3; border-left-style: none; border-left-width: medium; border-right-style: none; border-right-width: medium; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 0" bordercolor="#990000"></td>
+
+							<td align="right" valign="left" width="100%">
+								<!-- Reopen all criteria -->  
+								<input type="button" name="actionDummy" value="Reject" onclick="javascript:submitFormCQP(true,0,'RejectTPL',validateCQRejectTPL())" class="buttonStyle">  
+								<input type="button" name="actionDummy" value="Reopen" onclick="javascript:submitFormCQP(true,0,'ReopenTPL',validateCQReopenTPL());" class="buttonStyle">  
+								<input type="button" name="actiondummy" value="Export" onclick="javascript:setDisableAll(false);submitFormCQP(false,0,'ExportCQ');" class="buttonStyle">  
+								<input type="button" name="actionDummy" value="Select All" onclick="javascript:submitFormCQP(true,0,'',selectAllForTPL());" class="buttonStyle">  
+								<input type="button" name="actionDummy" value="Deselect All" onclick="javascript:submitFormCQP(true,0,'',deSelectAllForTPL());" class="buttonStyle"> 
+							</td>
+						
+						<td align="right" valign="left" width="100%" nowrap="">&nbsp;<input type="button" name="actiondummy" value="Cancel" (click) = toggle() class="buttonStyle">
+						</td>
+					</tr>
+					<tr>
+						<td height="4"><img src="/cqp_qa/cqpq/images/clear.gif" width="1%" height="1" border="0"></td>
+					</tr>
+				</tbody></table>
+            </div>
+
+        </ng-container>
+    </div>
+</div>
+</ng-container>
+
+<ng-container *ngIf="inner">
+    <table border="0" width="970" align="center" cellpadding="2" cellspacing="0">
+
+        <tbody>
+            <tr>
+                <td width="30%">Supplier:&nbsp;&nbsp;011620 ALPINE ELECTRONICS OF AMERICA</td>
+                <td width="50%"></td>
+
+                <td width="25%" align="right">Status:
+                    <font color="CC0000"><b>ACTIVE</b></font>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    TPL Ref. No.&nbsp;&nbsp;774200
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table width="970" align="center" border="0" cellspacing="0" cellpadding="0" height="18">
+        <tbody>
+            <tr>
+                <td width="10%">
+
+
+                    <a name="linkgotobottom" class="returntotop" href="javascript:goToBottom()">go to bottom of the
+                        page</a>
+
+                </td>
+                <td width="10%" align="right">
+                    Logged in as
+                    VCC74145
+                </td>
+            </tr>
+            <tr>
+                <td class="alertRed" align="left">
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="970" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td class="alerthead2" width="524">Update Transfer Part List Items:</td>
+
+                <td align="right"><a
+                        href="javascript:openApplicationWindow('/manageTPL.do?action=printView&amp;tplDtlItemID=774200&amp;printPage=currentTPL','height=500,width=700,scrollbars=1,resizable=0,menubar=0,location=0,toolbar=0','Print')">Printer-friendly</a>
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+    <table width="970" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td height="8"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1" border="0"></td>
+            </tr>
+            <tr>
+                <td height="1" bgcolor="#999999"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1"
+                        border="0"></td>
+            </tr>
+            <tr>
+                <td height="8"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1" border="0"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table width="970" align="center" border="0" cellpadding="2" cellspacing="0">
+        <tbody>
+            <tr>
+
+
+
+                <td width="150" class="data">Pickup Date:</td>
+
+
+
+                <td width="150" class="data">Due Date:</td>
+
+
+
+
+
+
+
+                <td width="150" class="data">Submitted Date:</td>
+                <td width="150" class="data">&nbsp;</td>
+                <td width="120" class="data"></td>
+            </tr>
+            <tr>
+                <td bgcolor="#FFFFFF" class="data">
+
+
+
+                    01/04/2021
+
+
+
+
+
+
+                </td>
+
+                <td bgcolor="#FFFFFF" class="data">
+
+
+                    02/01/2021
+
+
+
+
+
+
+                </td>
+
+
+                <td class="data">-</td>
+                <td class="data">&nbsp;</td>
+                <td class="data">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="data"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="4" border="0">
+                </td>
+            </tr>
+            <tr>
+                <td width="150" class="data">Reopen Date:</td>
+
+
+
+                <td width="150" class="data">Reopen Due Date:</td>
+
+
+
+
+
+
+                <td width="150" class="data">Reopen Submit Date:</td>
+
+                <td width="120" class="data">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="data"></td>
+                <td class="data">
+
+
+
+
+
+
+
+
+                </td>
+                <td class="data">-</td>
+
+                <td class="data">&nbsp;</td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="970" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td height="8"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1" border="0"></td>
+            </tr>
+            <tr>
+                <td height="1" bgcolor="#999999"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1"
+                        border="0"></td>
+            </tr>
+            <tr>
+                <td height="8"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1" border="0"></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table width="970" align="center" border="0" cellpadding="2" cellspacing="0">
+        <tbody>
+            <tr>
+                <td width="150" class="data">Claim No:</td>
+                <td width="150" class="data">ROYR:</td>
+                <td width="150" class="data">Part No:</td>
+                <td width="150" class="data">Model Year:</td>
+                <td width="120" class="data">Model Name:</td>
+            </tr>
+            <tr>
+                <td class="data">
+                    139501 </td>
+                <td class="data">
+                    2020</td>
+                <td class="data"> 39710</td>
+                <td class="data">2020</td>
+                <td class="data">ODYSSEY</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="data"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="4" border="0">
+                </td>
+            </tr>
+            <tr>
+                <td class="data">Dealer No:</td>
+                <td class="data">Dealer State:</td>
+                <td class="data">Assembly Off. Date:</td>
+                <td class="data">VIN</td>
+                <td class="data">Engine Off. Date.</td>
+            </tr>
+            <tr>
+                <td class="data">206534</td>
+                <td class="data">CA</td>
+                <td class="data">09/05/2019</td>
+                <td class="data">5FNRL6H79LB006338</td>
+                <td class="data">08/31/2019 </td>
+            </tr>
+            <tr>
+                <td colspan="5" class="data"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="4" border="0">
+                </td>
+            </tr>
+            <tr>
+                <td class="data">DTF:</td>
+                <td class="data">ODOM:</td>
+                <!-- KA OR KC Market - Market field related changes - vcc30756 - 091911  -->
+                <td class="data">Market:</td>
+                <td class="data">&nbsp;</td>
+                <td class="data">&nbsp;</td>
+                <td class="data">&nbsp;</td>
+
+            </tr>
+            <tr>
+                <td class="data">426 </td>
+                <td class="data">13043 </td>
+                <!-- KA OR KC Market - Market field related changes - vcc30756 - 091911  -->
+                <td class="data">KA </td>
+                <td class="data"><input type="hidden" name="tpldtlId" value="765848"></td>
+                <td class="data"><input type="hidden" name="tplItemDtlId" value="774200"></td>
+
+
+            </tr>
+            <tr>
+                <td colspan="5" class="data"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="4" border="0">
+                </td>
+            </tr>
+            <tr>
+                <td class="data">Customer Contention: </td>
+                <td class="data">&nbsp;</td>
+                <td class="data">&nbsp;</td>
+                <td class="data">&nbsp;</td>
+                <td class="data">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="5" class="data">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="data">Customer States AUDIO SCREEN DOES NOT TURN ON, SCREEN WILL BE BLUE OR
+                                    ALL BLACK CHECK AND ADVISE. </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="970" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td height="8"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1" border="0"></td>
+            </tr>
+            <tr>
+                <td height="1" bgcolor="#999999"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1"
+                        border="0"></td>
+            </tr>
+            <tr>
+                <td height="8"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1" border="0"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="970" align="center" border="0" cellpadding="2" cellspacing="0">
+        <tbody>
+            <tr>
+                <td width="20%" class="data">Visual Inspection Passed?:</td>
+                <td class="data" width="50%">Visual Inspection Details:</td>
+                <td colspan="2" class="data">Visual Inspection Details (Reanalysis):</td>
+            </tr>
+            <tr>
+
+
+                <td valign="top" class="databold">
+                    <font color="CC0000">No</font>
+                </td>
+
+                <td class="data">
+
+                </td>
+                <td class="data">
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="4" border="0"></td>
+            </tr>
+            <tr>
+                <td class="data">Functional Inspection Passed?:</td>
+                <td class="data">Functional Inspection Details:</td>
+                <td class="data">Functional Inspection Details (Reanalysis):</td>
+            </tr>
+            <tr>
+
+
+                <td valign="top" class="databold">
+                    <font color="CC0000">No</font>
+                </td>
+
+                <td class="data">
+
+                </td>
+                <td class="data">
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="4" border="0"></td>
+            </tr>
+            <tr>
+                <td class="data">Lot Number:</td>
+                <td class="data">Supplier Analysis Summary :</td>
+                <td class="data">
+                    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td width="30%" align="left">Return:</td>
+                                <!-- Start - Enhancement - Add PWG review checkbox -->
+
+                                <td align="left">Review:</td>
+
+                                <!-- End - Enhancement - Add PWG review checkbox -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" class="data">
+                    KJZ22233530
+                </td>
+                <td class="data">
+
+                </td>
+                <td class="data">
+                    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                        <tbody>
+                            <tr>
+                                <td width="30%" align="left">
+
+
+
+                                    No
+
+
+                                </td>
+                                <!-- Start - Enhancement - Add PWG review checkbox -->
+
+                                <td align="left">
+
+
+
+
+
+                                </td>
+
+                                <!-- End - Enhancement - Add PWG review checkbox -->
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="4" border="0">
+                </td>
+            </tr>
+            <tr>
+                <td class="data">Category:</td>
+
+
+
+                <td width="500" class="data">New Category: </td>
+
+
+
+
+
+                <!-- SR10610 changes -->
+
+            </tr>
+
+            <tr>
+
+
+
+
+                <td class="data">
+                    <select name="categoryUpd" class="data">
+                        <option value=""></option>
+                        <option value="NEW">NEW</option>
+                        <option value="270860" selected="selected">sk-xyz</option>
+                    </select>
+                </td>
+                <td> <input type="text" name="newCategory" size="30" value="" onchange="setTabOut();"></td>
+
+
+
+
+
+            </tr>
+            <tr>
+
+                <input type="hidden" name="isCMReportNoRequired" value="false">
+
+
+                <td class="data">
+                    C/M Report No:</td>
+
+                <td class="data">&nbsp;Conclusion:</td>
+            </tr>
+            <tr>
+                <td>
+
+
+
+
+                    <input type="text" name="cmReportNo" maxlength="100" value="" onchange="setTabOut();">
+
+
+
+
+
+                </td>
+                <td valign="top" class="data">
+
+                </td>
+                <td class="data">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="4"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="4" border="0"></td>
+            </tr>
+
+        </tbody>
+    </table>
+    <!-- Spacing & Option Buttons Table -->
+
+    <table width="970" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td height="8"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1" border="0"></td>
+            </tr>
+
+            <tr>
+                <td height="8"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1" border="0"></td>
+            </tr>
+            <tr>
+                <td align="right"
+                    style="padding-left: 3; padding-top: 3; padding-bottom: 3; border-left-style: none; border-left-width: medium; border-right-style: none; border-right-width: medium; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 0"
+                    bordercolor="#990000">
+
+
+
+                    <input type="button" name="actionDummy" value="Save"
+                        onclick="javascript:submitFormCQP(true,0,'saveTPLCq',ValidateUpdateTPLCQ());"
+                        class="buttonStyle">
+
+
+
+                    <input type="button" name="actionDummy" value="Reject"
+                        onclick="javascript:submitFormCQP(false,0,'RejectTPL',null)" class="buttonStyle">
+
+
+
+
+
+                    <input type="button" name="actionDummy" value="Delete"
+                        onclick="javascript:submitFormCQP(true,0,'deleteTPLCq',ValidateDeleteTPLCQ());"
+                        class="buttonStyle">
+
+
+
+                    <!--Start - Enhancement - Reopen an already reopened TPL-->
+
+                    <input type="hidden" name="reopenAgain" value="">
+                    <!--End - Enhancement - Reopen an already reopened TPL-->
+
+                    <input type="button" name="actionDummy" value="Comments"
+                        (click) = toggleComments() class="buttonStyle">
+
+
+                    <!--Checking for Availability of Extension-->
+
+
+
+
+
+                    <input type="button" name="actionDummy" value="Reset"
+                        onclick="javascript:submitAction('resetTPLCq')" class="buttonStyle">
+
+                    <input type="button" name="actionDummy" value="Cancel"
+                        (click)=toggle1() class="buttonStyle">
+
+
+
+                </td>
+            </tr>
+            <tr>
+                <td height="3"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1" border="0"></td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
+
+
+<ng-container *ngIf="external">
+
+    <table width="970" align="center" border="0" cellspacing="0" cellpadding="0" height="18">
+        <tbody>
+            <tr>
+                <td class="alertRed" align="left">
+
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Spacer Table -->
+    <table width="970" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td height="2"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1" border="0"></td>
+            </tr>
+            <tr>
+                <td height="1" bgcolor="#999999"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1"
+                        border="0"></td>
+            </tr>
+            <tr>
+                <td height="2"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1" border="0"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="970" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td colspan="2" class="alerthead2"><a name="List"></a>Comments:</td>
+            </tr>
+            <tr>
+
+
+
+                <td class="data" colspan="3">Enter a comment and select submit.</td>
+
+
+            </tr>
+
+            <tr>
+                <td width="300" class="data">Supplier:
+                    011620 ALPINE ELECTRONICS OF AMERICA
+                </td>
+            </tr>
+
+            <tr>
+
+
+
+                <td width="76" class="data" align="left"></td>
+                <td width="38%" align="right" class="recordnumber">
+                    2
+                    records
+                </td>
+                <td width="12%" align="center" class="data">
+
+                    &nbsp;
+
+                    <select name="listPageSelector"
+                        onchange="document.forms[0].action.value='gotoPageForListSup';document.forms[0].submit();"
+                        class="data">
+                        <option value="1" selected="selected">1</option>
+                    </select>
+
+                    &nbsp;
+
+                </td>
+
+
+            </tr>
+            <tr>
+                <td colspan="4" height="2">
+                    <img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1" border="0">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table style="table-layout: fixed" border="0" cellspacing="1" cellpadding="4" align="center" width="970">
+        <colgroup>
+            <col width="20%">
+            <col width="50%">
+            <col width="30%">
+
+        </colgroup>
+        <tbody>
+            <tr align="left" valign="top" bgcolor="#D3D9A4" style="height: 23px; padding-left: 4px">
+                <th bordercolor="#FFFFFF" style="border-bottom-width: 1" class="colheadactive">Date Time</th>
+                <th bordercolor="#FFFFFF" style="border-bottom-width: 1" class="colheadactive">Comment</th>
+                <th bordercolor="#FFFFFF" style="border-bottom-width: 1" class="colheadactive">Login Id</th>
+            </tr>
+
+
+
+
+
+            <!-- Logic to get alternate row colors  -->
+
+            <tr bgcolor="#F6F3B5">
+                <td align="left" width="20%" style="border-bottom-width: 1; border-left-style: none; padding-left: 4">
+                    05/05/2021 1:04 PM</td>
+                <td align="left" width="60%"
+                    style="page-break-after: always;border-bottom-width: 1; border-left-style: none; padding-left: 4">
+                    ABC</td>
+                <td align="left" width="10%" style="border-bottom-width: 1; border-left-style: none; padding-left: 4">
+                    Test&nbsp;User 145<br>
+                    VCC74145</td>
+
+            </tr>
+
+
+            <!-- Logic to get alternate row colors  -->
+
+            <tr bgcolor="#FFFFFF">
+                <td align="left" width="20%" style="border-bottom-width: 1; border-left-style: none; padding-left: 4">
+                    05/05/2021 1:11 PM</td>
+                <td align="left" width="60%"
+                    style="page-break-after: always;border-bottom-width: 1; border-left-style: none; padding-left: 4">
+                    Shricolour</td>
+                <td align="left" width="10%" style="border-bottom-width: 1; border-left-style: none; padding-left: 4">
+                    Test&nbsp;User 145<br>
+                    VCC74145</td>
+
+            </tr>
+
+
+
+        </tbody>
+    </table>
+
+
+    <table width="970" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td>
+                    <hr size="1">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- Spacer & Actions Table -->
+
+
+
+
+    <table width="970" align="center" border="0" cellspacing="0" cellpadding="2">
+        <tbody>
+            <tr>
+                <td class="databold">Comment:</td>
+                <td class="databold">Visible To: </td>
+            </tr>
+            <tr>
+                <td align="left" class="data">
+                    <textarea name="comments1" cols="160" rows="4" onchange="setTabOut();" class="data"></textarea>
+                </td>
+                <td class="data" valign="top">
+                    <select name="visibilityFlag" class="data">
+                        <option value="All" selected="selected">All</option>
+                        <option value="Honda User Only">Honda User Only</option>
+                    </select>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table width="970" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td height="12"><img src="/cqp_qa/cqpq/images/clear.gif" width="1" height="1" border="0"></td>
+            </tr>
+            <tr>
+                <td align="right"
+                    style="padding-left: 3; padding-top: 3; padding-bottom: 3; border-left-style: none; border-left-width: medium; border-right-style: none; border-right-width: medium; border-top-style: none; border-top-width: medium; border-bottom-style: solid; border-bottom-width: 1"
+                    bordercolor="#990000">
+
+
+
+
+
+                    <input type="button" name="actiondummy" value="Submit"
+                        onclick="javascript:submitFormCQP(true,0,'Submit',validateCommentSave())" class="buttonStyle">
+
+
+                    <input type="button" name="actiondummy" value="Reset" onclick="javascript:submitAction('Reset')"
+                        class="buttonStyle">
+
+
+
+                    <input type="button" name="actiondummy" value="Cancel" (click)=toggleComments()
+                        class="buttonStyle">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</ng-container>
