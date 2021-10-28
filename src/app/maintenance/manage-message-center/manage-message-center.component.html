@@ -29,19 +29,17 @@
                     <option value="S" selected="selected">Supplier users</option>
                 </select>
             </td>
+            <td class="data" width="150">Select System:</td>
             <td class="data" align="left" valign="top">
-                <div id="supplierDropdown" style="display: block;">
+                <div id="systemDropdown" >
 
-                    <select name="messageCenterDTO.supplierNoName" onchange="getAndPopulateMessage()"
-                        id="messageCenterDTO.supplierNoName" class="data">
-                        <option value="011620 ALPINE ELECTRONICS OF AMERICA" selected="selected">011620 ALPINE
-                            ELECTRONICS OF AMERICA</option>
-                        <option value="033516 CLARION CORP OF AMERICA">033516 CLARION CORP OF AMERICA</option>
-                        <option value="140290 DENSO INTERNATIONAL AMERICA">140290 DENSO INTERNATIONAL AMERICA</option>
-                        <option value="140660 NTN BEARING CORP OF AMERICA">140660 NTN BEARING CORP OF AMERICA</option>
-                        <option value="161020 PIONEER AUTOMOTIVE TECH">161020 PIONEER AUTOMOTIVE TECH</option>
+                    <select name="messageCenterDTO.systemName" class="data">
+                        <option value="Both">--Select System--</option>
+                        <option value="Both">Both</option>
+                        <option value="CQP">CQP</option>
+                        <option value="WRP">WRP</option>
+                        
                     </select>
-
                 </div>
             </td>
         </tr>

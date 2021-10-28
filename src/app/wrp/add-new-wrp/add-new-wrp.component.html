@@ -8,14 +8,23 @@ WRP - Add new WRP
 		cellspacing="0">
 		<tbody>
 			<tr>
-				<td width="20%" class="data">WRP</td>
-				<td width="20%" bgcolor="#FFFFFF" class="data">Primary QIS#</td>
+				<td width="20%" bgcolor="#FFFFFF" class="data">Source</td>
+				<td width="20%" bgcolor="#FFFFFF" class="data">Ref#</td>
 				<td width="20%" bgcolor="#FFFFFF" class="data">Supplier #</td>
+				<td width="20%" bgcolor="#FFFFFF" class="data">Warranty Type</td>
+				<td width="20%" bgcolor="#FFFFFF" class="data">WRP</td>
 				<td width="20%" bgcolor="#FFFFFF" class="data">WRP Issuer</td>
-				<td width="20%" bgcolor="#FFFFFF" class="data" colspan="2">Warranty
-					Type</td>
 			</tr>
 			<tr>
+				<td class="data" valign="top"><select name="primaryQis"
+					style="width: 150px" class="data"><option value="ALL"
+							selected="selected">ALL</option>
+
+						<option value="77930">77930-SENSOR, FR. CRASH</option>
+						<option value="77960">77960-SRS UNIT</option>
+						<option value="77970">77970-SENSOR, SIDE IMPACT</option>
+						<option value="77975">77975-SENSOR ASSY.</option></select>
+				</td>
 				<td width="25%" class="data" valign="top">
 					<div class="form-group">
 						<input type="text" size="18px" id="primaryQis" name="primaryQis">
@@ -30,26 +39,20 @@ WRP - Add new WRP
 						<option value="77970">77970-SENSOR, SIDE IMPACT</option>
 						<option value="77975">77975-SENSOR ASSY.</option></select>
 				</td>
-				<td class="data" valign="top"><select name="supplierno" 
-				    style="width: 150px" class="data"><option
-							value="ALL" selected="selected">ALL</option>
-
-						<option value="2008">2008</option>
-						<option value="2014">2014</option>
-						<option value="2015">2015</option>
-						<option value="2020">2020</option></select>
-				</td>
-				<td class="data" valign="top"><select name="respassociate" 
-				    style="width: 150px" class="data"><option
-							value="ALL" selected="selected">ALL</option>
-
-						<option value="2008">2008</option>
-						<option value="2014">2014</option>
-						<option value="2015">2015</option>
-						<option value="2020">2020</option></select>
-				</td>
 				<td class="data" valign="top"><select name="warrantytype" 
-				    style="width: 150px" class="data"><option
+				    style="width: 150px" class="data" ng-model="warranty">
+						<option value="ALL">ALL</option>
+						<option value="campaign">Campaign Warranty</option>
+						<option value="normal">Normal Warranty</option></select>
+				</td>
+				<td width="25%" class="data" valign="top">
+					<div class="form-group">
+						<input type="text" size="18px" id="wrp" name="wrp">
+					</div>
+				</td>
+				
+				<td class="data" valign="top">
+					<select name="" style="width: 150px" class="data"><option
 							value="ALL" selected="selected">ALL</option>
 
 						<option value="2008">2008</option>
@@ -59,6 +62,18 @@ WRP - Add new WRP
 				</td>
 			</tr>
 
+			<tr>
+				<td colspan="3"></td>
+				<td width="20%" bgcolor="#FFFFFF" class="data" valign="top" >Defect Code</td>
+			</tr>
+			<tr>
+				<td colspan="3"></td>
+				<td width="25%" class="data" valign="top" >
+					<div class="form-group">
+						<input type="text" size="18px" id="wrp" name="wrp">
+					</div>
+				</td>
+			</tr>
 
 		</tbody>
 	</table>
