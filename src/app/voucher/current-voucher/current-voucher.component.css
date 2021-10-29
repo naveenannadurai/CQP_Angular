@@ -25,3 +25,43 @@
     font-weight: normal;
     text-decoration: none;
 }
+
+.partcol{
+    width: 90px;
+}
+
+.mycol{
+    width: 40px;
+}
+
+.mktcol{
+    width: 30px;
+}
+
+.modeltypecol{
+    width: 85px;
+}
+
+.replacementcol{
+    width: 135px;
+}
+
+.claimscol{
+    width: 42px;
+}
+
+.warrentycostscol{
+    width: 48px;
+}
+
+.handlingcol{
+    width: 62px;
+}
+
+.totalcol{
+    width: 65px;
+}
+
+.supplierrespcol{
+    width: 125px;
+}

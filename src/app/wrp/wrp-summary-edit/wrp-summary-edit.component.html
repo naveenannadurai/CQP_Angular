@@ -8,7 +8,7 @@
 
 		<div class="section1">
 
-			<table width="100%" align="center" border="0" cellpadding="2"
+			<table width="100%" align="center" border="0" cellpadding="5"
 				cellspacing="0">
 
 				<tr>
@@ -16,21 +16,15 @@
 					<td width="8%" align="left"><input type="text" name="refNo"
 						size="14" value="" class="data"></td>
 					<td width="6%" bgcolor="#FFFFFF" class="data">Title:</td>
-					<td width="8%"><input type="text" name="refNo" size="14"
+					<td width="7%" colspan="3"><input type="text" name="refNo" size="49"
 						value="" class="data"></td>
 					<td width="24%" bgcolor="#FFFFFF" class="data">Status:</td>
 					<td width="24%" bgcolor="#FFFFFF" class="data"></td>
-					<td width="24%" bgcolor="#FFFFFF" class="data" colspan="2">INITIAL
-						SUMMARY</td>
-					<td width="24%" bgcolor="#FFFFFF" class="data">
 				</tr>
 
 				<tr>
-					<td width="4%" class="data">Created By:</td>
-					<td width="8%" align="left"><input type="text" name="createdby"
-						size="14" value="" class="data"></td>
-					<td width="4%" class="data">Issuer:</td>
-					<td width="20%" class="data" align="left"><select
+					<td width="18%" class="data">WRP Issuer:</td>
+					<td width="14%" class="data" align="left"><select
 						name="status_name" class="data"><option value="ALL"
 								selected="selected">Select One</option>
 							<option value="issuer1">Issuer 1</option>
@@ -38,67 +32,49 @@
 							<option value="issuer1">Issuer 3</option>
 							<option value="issuer1">Issuer 4</option>
 					</select></td>
-					<td width="21%" bgcolor="#FFFFFF" class="data">New
+					<td width="18%" bgcolor="#FFFFFF" class="data">New
 						CalculationMethod?</td>
 					<td width="5%"><input type="checkbox" name="refNo"
 						class="data"></td>
-					<td width="5%" bgcolor="#FFFFFF" class="data" colspan="2">Warranty Type:</td>
-					<td width="15%" class="data"><select name="status_name"
-						class="data"><option value="ALL" selected="selected">Select
-								One</option>
-							<option value="type1">Type 1</option>
-							<option value="type1">Type 2</option>
-							<option value="type1">Type 3</option>
-							<option value="type1">Type 4</option>
-					</select></td>
+						<td width="4%" class="data">Created By:</td>
+						<td width="14%" bgcolor="#FFFFFF" class="data"></td>
+					<!-- <td width="8%" align="left"><input type="text" name="createdby"
+						size="14" value="" class="data"></td> -->
+					<td width="5%" bgcolor="#FFFFFF" class="data">Warranty Type:</td>
+					<td width="14%"><input type="text" name="refNo" maxlength="10"
+						size="14" value="" class="data"></td>
 					
 				</tr>
 
 				<tr>
-					<td width="8%" class="data">OIS No:</td>
-					<td width="20%" class="data" align="left"><input type="text"
-						name="refNo" size="14" value="" class="data"></td>
-					<td width="21%" bgcolor="#FFFFFF" class="data">Resp Plant:</td>
-					<td width="25%" class="data"><select name="status_name"
-						class="data"><option value="ALL" selected="selected">Select
-								One</option>
-							<option value="type1">Plant 1</option>
-							<option value="type1">Plant 2</option>
-							<option value="type1">Plant 3</option>
-							<option value="type1">Plant 4</option>
-					</select></td>
-
 					<td width="5%" bgcolor="#FFFFFF" class="data">Defect Code:</td>
 					<td width="14%"><input type="text" name="refNo" maxlength="10"
-						size="10" value="" class="data"></td>
-					<td width="6%" bgcolor="#FFFFFF" class="data" colspan="2">Mode
-						of Initial/Future Requirement:</td>
+						size="14" value="" class="data"></td>
+					<td width="8%" class="data">Source:</td>
+					<td width="14%" class="data" align="left"><input type="text"
+						name="refNo" size="14" value="" class="data"></td>
+					<td width="8%" class="data">Ref#:</td>
+					<td width="14%" class="data" align="left"><input type="text"
+						name="refNo" size="14" value="" class="data"></td>
+					
+					<td width="6%" bgcolor="#FFFFFF" class="data">Created Date:</td>
 					<td width="14%"><input type="text" name="refNo" maxlength="10"
-						size="10" value="" class="data"></td>
+						size="14" value="" class="data"></td>
 					
 				</tr>
 
 				<tr>
-					<td bgcolor="#FFFFFF" class="data">Issued:</td>
+					<!-- <td bgcolor="#FFFFFF" class="data">Issued:</td>
 					<td bgcolor="#FFFFFF" class="data"><mat-form-field appearance="outline" class="dateBox">
 					<input matInput [matDatepickerFilter]="dateFilter"
 						[matDatepicker]="idpicker" placeholder="Choose a date"> <mat-datepicker-toggle
 						matSuffix [for]="idpicker"></mat-datepicker-toggle> <mat-datepicker
 						#idpicker></mat-datepicker> </mat-form-field>
-						</td>
-					
-					<td width="3%" class="data">Revision Date/Level:</td>
-					<td width="12%" align="left"><input type="text" name="refNo"
-						size="10" value="" class="data"> <input type="text"
-						name="refNo" size="10" value="" class="data"></td>
+						</td> -->
 
-					<td width="6%" bgcolor="#FFFFFF" class="data">Buyer:</td>
-					<td width="30%"><input type="text" name="refNo" size="10"
+					<td width="6%" bgcolor="#FFFFFF" class="data">Last Modified Date:</td>
+					<td width="14%"><input type="text" name="refNo" size="14"
 						value="" class="data"></td>
-					<td width="6%" bgcolor="#FFFFFF" class="data" colspan="2">Frequency
-						of Future Payments:</td>
-					<td width="14%"><input type="text" name="refNo" maxlength="10"
-						size="10" value="" class="data"></td>
 				</tr>
 			</table>
 
