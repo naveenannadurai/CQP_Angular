@@ -72,7 +72,7 @@ const routes: Routes = [
   { path: 'part-override', component: PartOverrideComponent },
   { path: 'proposed-ux', component: ProposedUxComponent },
    
-   
+  
   
   { path: 'add-new-wrp', component: AddNewWrpComponent },
   { path: 'wrp-home', component: WrpHomeComponent },

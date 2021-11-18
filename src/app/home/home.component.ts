@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   public data: any;
   ngOnInit() {
     this.getinbox();
-    // this.getAlerts();
+    this.getAlerts();
   }
   export(fileName: string) {
     this.alertService.export(fileName).subscribe(

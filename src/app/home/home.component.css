@@ -4,9 +4,6 @@
     width: 190px;
 }
 
-tr:nth-child(even){
-    background-color: #F6F3B5;
-}
 table{
     border-color: white;
 }
