@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { ErrorHandler, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { GridModule } from '@progress/kendo-angular-grid';
 import { MatDialogModule} from '@angular/material/dialog';
 import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
+import { MyErrorHandler } from './app.myErrorHandler';
 //import 'hammerjs';
 
 
@@ -73,6 +74,7 @@ import { AdministrationComponent } from './audit-trail/administration/administra
 import { CategoryComponent } from './audit-trail/category/category.component';
 import { BillOfMaterialsComponent } from './audit-trail/bill-of-materials/bill-of-materials.component';
 import { ChartsModule, ThemeService } from 'ng2-charts';
+import { AlertService } from './service/alert.service';
 
 @NgModule({
   declarations: [
@@ -157,7 +159,7 @@ import { ChartsModule, ThemeService } from 'ng2-charts';
       ChartsModule,
 	   
     ],
-  providers: [ThemeService],
+  providers: [ThemeService,{provide: ErrorHandler, useClass: MyErrorHandler},AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

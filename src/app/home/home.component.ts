@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { DownloadService } from "../service/download.service";
 import { saveAs } from 'file-saver';
+import { throwError } from 'rxjs';
 
 //import { jsonpFactory } from '@angular/http/src/http_module';
 @Component({
@@ -27,6 +28,7 @@ export class HomeComponent implements OnInit {
   public user = new Array();
   public data: any;
   ngOnInit() {
+    // var a=b;
     this.getinbox();
     this.getAlerts();
   }
