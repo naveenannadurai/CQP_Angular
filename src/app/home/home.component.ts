@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
   public user = new Array();
   public data: any;
   ngOnInit() {
-    // var a=b;
     this.getinbox();
     this.getAlerts();
   }

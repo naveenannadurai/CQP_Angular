@@ -92,12 +92,12 @@ public getinbox():Observable<any>{
 }
 
 public getAlerts():Observable<any>{
-  return this.http.get<any>(this.apiUrl+"datas")
+  return this.http.get<any>(this.apiUrl+"data")
 }
 
 public sendErrorLog(errorMessage:String,pathLocation:String):Observable<any>{
-  var data={'errorMessage':errorMessage,'pathLocation':pathLocation};
-  return this.http.post<any>(this.apiUrl+"logs",JSON.stringify(data));
+  var data={'error':errorMessage,'message':pathLocation};
+  return this.http.post<any>(this.apiUrl+"logs",JSON.stringify(data),{ headers: {  "Content-Type": "application/json"  }});
 }
 
 }
