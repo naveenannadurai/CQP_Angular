@@ -4,6 +4,6 @@
     width: 190px;
 }
 
-table{
-    border-color: white;
+tr:nth-child(even) {
+    background-color: #ffff;
 }

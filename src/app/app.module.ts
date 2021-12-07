@@ -75,6 +75,7 @@ import { CategoryComponent } from './audit-trail/category/category.component';
 import { BillOfMaterialsComponent } from './audit-trail/bill-of-materials/bill-of-materials.component';
 import { ChartsModule, ThemeService } from 'ng2-charts';
 import { AlertService } from './service/alert.service';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 
 @NgModule({
   declarations: [
@@ -157,6 +158,7 @@ import { AlertService } from './service/alert.service';
 	    GridModule,
 	    DropDownsModule,
       ChartsModule,
+      NgMultiSelectDropDownModule.forRoot()
 	   
     ],
   providers: [ThemeService,{provide: ErrorHandler, useClass: MyErrorHandler},AlertService],

@@ -1,334 +1,1377 @@
-<div class="screen-title">WRP - WRP Summary Edit</div>
-<br>
+<div class="screen-title">WRP - WRP Summary</div>
 <form>
 
-	<div class="grid-container">
+    <div class="grid-container">
 
-		<!-- ===================================  Section 1 ==================================== -->
+        <!-- ===================================  Section 1 ==================================== -->
 
-		<div class="section1">
+        <div class="section1">
 
-			<table width="100%" align="center" border="0" cellpadding="5"
-				cellspacing="0">
+            <table width="100%" align="center" border="0" cellpadding="2" cellspacing="0">
 
-				<tr>
-					<td width="3%" class="data">WRP:</td>
-					<td width="8%" align="left"><input type="text" name="refNo"
-						size="14" value="" class="data"></td>
-					<td width="6%" bgcolor="#FFFFFF" class="data">Title:</td>
-					<td width="7%" colspan="3"><input type="text" name="refNo" size="49"
-						value="" class="data"></td>
-					<td width="24%" bgcolor="#FFFFFF" class="data">Status:</td>
-					<td width="24%" bgcolor="#FFFFFF" class="data"></td>
-				</tr>
+                <tr>
+                    <!-- <table width="100%" align="left" border="0" cellpadding="2" cellspacing="0">
+						<tr> -->
+                    <td class="data">WRP#:</td>
+                    <td align="left">
+                        <input type="text" name="WRPNo" size="14" value="" class="data" readonly="true">
+                    </td>
+                    <td bgcolor="#FFFFFF" class="data">Title:</td>
+                    <td align="left" colspan="3"><input type="text" name="Title" size="60" value="" class="data"></td>
+                    <td bgcolor="#FFFFFF" class="data">Status:</td>
+                    <td class="data" align="left">
+                        <select name="Status" class="data"><option value="ALL" selected="selected">Select
+										One</option>
+									<option value="Initial Summary">Initial Summary</option>
+									<option value="Active Monthly Voucher">Active Monthly Voucher</option>
+									<option value="Active Manual Voucher">Active Manual Voucher</option>
+									<option value="Inactive">Inactive</option>
+									<option value="Rejected">Rejected</option>
+								</select>
+                    </td>
+                    <!-- </tr>
+					</table> -->
+                </tr>
+                <tr>
+                    <td class="data"></td>
+                </tr>
 
-				<tr>
-					<td width="18%" class="data">WRP Issuer:</td>
-					<td width="14%" class="data" align="left"><select
-						name="status_name" class="data"><option value="ALL"
-								selected="selected">Select One</option>
-							<option value="issuer1">Issuer 1</option>
-							<option value="issuer1">Issuer 2</option>
-							<option value="issuer1">Issuer 3</option>
-							<option value="issuer1">Issuer 4</option>
-					</select></td>
-					<td width="18%" bgcolor="#FFFFFF" class="data">New
-						CalculationMethod?</td>
-					<td width="5%"><input type="checkbox" name="refNo"
-						class="data"></td>
-						<td width="4%" class="data">Created By:</td>
-						<td width="14%" bgcolor="#FFFFFF" class="data"></td>
-					<!-- <td width="8%" align="left"><input type="text" name="createdby"
-						size="14" value="" class="data"></td> -->
-					<td width="5%" bgcolor="#FFFFFF" class="data">Warranty Type:</td>
-					<td width="14%"><input type="text" name="refNo" maxlength="10"
-						size="14" value="" class="data"></td>
-					
-				</tr>
+                <tr>
+                    <!-- <table width="100%" align="left" border="0" cellpadding="2" cellspacing="0">
+						<tr> -->
+                    <td class="data">Issuer:</td>
+                    <td class="data" align="left"><select name="Issuer" class="data"><option value="ALL"
+										selected="selected">Select One</option>
+									<option value="Keith">Keith Baldwin</option>
+									<option value="Sue">Sue Rizo</option>							
+							</select></td>
+                    <td bgcolor="#FFFFFF" class="data">New Calculation Method?</td>
+                    <td align="left"><input type="checkbox" name="CalcMethod" class="data"></td>
+                    <td bgcolor="#FFFFFF" class="data">Created By:</td>
+                    <td class="data" align="left">
+                        <input type="text" name="CreatedBy" readonly="true" size="14" value="" class="data">
+                        <!-- <select name="status_name" class="data"><option value="ALL" selected="selected">Select
+										One</option>
+									<option value="N">Normal Warranty</option>
+									<option value="C">Campaign Warranty</option>							
+								</select> -->
+                    </td>
+                    <td bgcolor="#FFFFFF" class="data">Defect Code:</td>
+                    <td align="left"><input type="text" name="DefectCd" maxlength="5" size="14" value="" class="data"></td>
+                    <!-- </tr>
+					</table>				 -->
+                </tr>
+                <tr>
+                    <td class="data"></td>
+                </tr>
+                <tr>
+                    <!-- <table width="100%" align="left" border="0" cellpadding="2" cellspacing="0">
+						<tr> -->
+                    <td class="data">Source:</td>
+                    <td class="data" align="left"><input type="text" name="Source" readonly="true" size="14" value="" class="data"></td>
+                    <td class="data">Ref #:</td>
+                    <td class="data" align="left"><input type="text" name="RefNo" readonly="true" size="14" value="" class="data"></td>
+                    <td class="data">Created Date:</td>
+                    <td class="data" align="left"><input type="text" name="CreatedDt" readonly="true" size="14" value="" class="data"></td>
+                    <td class="data">Last Modified Date:</td>
+                    <td class="data" align="left"><input type="text" name="ModifiedDt" readonly="true" size="14" value="" class="data"></td>
+                    <td colspan="2"></td>
+                    <!-- </tr>
+					</table>														 -->
+                </tr>
+                <tr>
+                    <td class="data">Warranty Type:</td>
+                    <td class="data" align="left"><input type="text" name="Source" readonly="true" size="14" value="" class="data"></td>
+                    <td colspan="8"></td>
+                </tr>
 
-				<tr>
-					<td width="5%" bgcolor="#FFFFFF" class="data">Defect Code:</td>
-					<td width="14%"><input type="text" name="refNo" maxlength="10"
-						size="14" value="" class="data"></td>
-					<td width="8%" class="data">Source:</td>
-					<td width="14%" class="data" align="left"><input type="text"
-						name="refNo" size="14" value="" class="data"></td>
-					<td width="8%" class="data">Ref#:</td>
-					<td width="14%" class="data" align="left"><input type="text"
-						name="refNo" size="14" value="" class="data"></td>
-					
-					<td width="6%" bgcolor="#FFFFFF" class="data">Created Date:</td>
-					<td width="14%"><input type="text" name="refNo" maxlength="10"
-						size="14" value="" class="data"></td>
-					
-				</tr>
+            </table>
 
-				<tr>
-					<!-- <td bgcolor="#FFFFFF" class="data">Issued:</td>
-					<td bgcolor="#FFFFFF" class="data"><mat-form-field appearance="outline" class="dateBox">
-					<input matInput [matDatepickerFilter]="dateFilter"
-						[matDatepicker]="idpicker" placeholder="Choose a date"> <mat-datepicker-toggle
-						matSuffix [for]="idpicker"></mat-datepicker-toggle> <mat-datepicker
-						#idpicker></mat-datepicker> </mat-form-field>
-						</td> -->
+            <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                    <tr>
+                        <td height="8"></td>
+                    </tr>
+                    <tr>
+                        <td height="1" bgcolor="#999999"></td>
+                    </tr>
+                    <tr>
+                        <td height="8"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-					<td width="6%" bgcolor="#FFFFFF" class="data">Last Modified Date:</td>
-					<td width="14%"><input type="text" name="refNo" size="14"
-						value="" class="data"></td>
-				</tr>
-			</table>
+        <!-- ===================================  Section 2 ==================================== -->
+        <div class="section2-1">
+            <table>
+                <tr>
+                    <td width="100px" class="data">Part List:</td>
+                    <td width="200px" class="data" align="left" style="vertical-align: top;">
+                        <select name="Parts" multiple="multiple" class="data" style="width: 100%;">  
+							<option value="1"> 53601 - SET G/BOX COMP </option>
+							<option value="2"> 06161 - KIT, PRESSURE REGLTR </option>  
+							<option value="3"> 16016 - WIRE, LEAD </option> 
+							<option value="4"> 06561 - PUMP SUB-ASSY., P.S </option>
+							<option value="5"> 18011 - SENSOR ASSY, L RR </option>							
+						</select>
+                    </td>
+                    <td style="vertical-align: bottom;width: 20px;">
+                        <img src="/assets/remove-icon-png.png" width="20px" height="20px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100px" class="data"></td>
+                    <td colspan="2">
+                        <input type="text" name="AddPart" size="14" value="" class="data">&nbsp;
+                        <button valign="top" (click)="newoverrideForm.reset()" style="width: 40px;" type="submit" class="cqp-btn btn-space">Add</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#FFFFFF" width="100px" class="data">Claim Date Range:</td>
+                    <td bgcolor="#FFFFFF" class="data" colspan="2">
+                        <mat-form-field appearance="outline" class="dateBox" style="width: 80%;height: 40px;">
+                            <input matInput [matDatepickerFilter]="dateFilter" [matDatepicker]="cdpicker1" placeholder="Choose a date">
+                            <mat-datepicker-toggle matSuffix [for]="cdpicker1"></mat-datepicker-toggle>
+                            <mat-datepicker #cdpicker1></mat-datepicker>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100px" bgcolor="#FFFFFF" class="data">Build Date Range:</td>
+                    <td bgcolor="#FFFFFF" class="data" colspan="2">
+                        <mat-form-field appearance="outline" class="dateBox" style="width: 80%;height: 40px;">
+                            <input matInput [matDatepickerFilter]="dateFilter" [matDatepicker]="bdpicker1" placeholder="Choose a date">
+                            <mat-datepicker-toggle matSuffix [for]="bdpicker1"></mat-datepicker-toggle>
+                            <mat-datepicker #bdpicker1></mat-datepicker>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="section2-2">
+            <table>
+                <tr>
+                    <td width="50px" class="data">Model(s):</td>
+                    <td width="150px" class="data" align="left" style="vertical-align: top;">
+                        <select name="Parts" multiple="multiple" class="data" style="width: 100%;">  
+							<option value="1"> 2019 - MAP - ACCORD </option>
+							<option value="2"> 2020 - HCM -  CIVIC </option>  
+							<option value="3"> 2021 - HMA - ODYSSEY </option> 												
+						</select>
+                    </td>
+                    <td style="vertical-align: bottom;width: 20px;">
+                        <img src="/assets/remove-icon-png.png" width="20px" height="20px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50px" class="data"></td>
+                    <td colspan="2">
+                        <input type="text" name="AddModel" size="14" value="" class="data">&nbsp;
+                        <button valign="top" (click)="newoverrideForm.reset()" style="width: 40px;" type="submit" class="cqp-btn btn-space">Add</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50px" bgcolor="#FFFFFF" class="data">To:</td>
+                    <td bgcolor="#FFFFFF" class="data" colspan="2">
+                        <mat-form-field appearance="outline" class="dateBox" style="width: 80%;height: 40px;">
+                            <input matInput [matDatepickerFilter]="dateFilter" [matDatepicker]="cdpicker2" placeholder="Choose a date">
+                            <mat-datepicker-toggle matSuffix [for]="cdpicker2"></mat-datepicker-toggle>
+                            <mat-datepicker #cdpicker2></mat-datepicker>
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50px" bgcolor="#FFFFFF" class="data">To:</td>
+                    <td bgcolor="#FFFFFF" class="data" colspan="2">
+                        <mat-form-field appearance="outline" class="dateBox" style="width: 80%;height: 40px;">
+                            <input matInput [matDatepickerFilter]="dateFilter" [matDatepicker]="bdpicker2" placeholder="Choose a date">
+                            <mat-datepicker-toggle matSuffix [for]="bdpicker2"></mat-datepicker-toggle>
+                            <mat-datepicker #bdpicker2></mat-datepicker>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
 
-			<table width="100%" align="center" border="0" cellpadding="0"
-				cellspacing="0">
-				<tbody>
-					<tr>
-						<td height="8"></td>
-					</tr>
-					<tr>
-						<td height="1" bgcolor="#999999"></td>
-					</tr>
-					<tr>
-						<td height="8"></td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
+        </div>
+        <div class="section2-3">
+            <table>
+                <tr>
+                    <td width="50px">Plants:</td>
+                    <td width="100px" class="data" align="left" style="vertical-align: top;">
+                        <select name="Plants" multiple="multiple" class="data" style="width: 100%;">  
+							<option value="1" selected="true"> HAM </option>
+							<option value="2"> HDMA </option>  
+							<option value="3" selected="true"> HCM </option> 
+							<option value="4"> HMIN </option>
+							<option value="5"> HSC </option>							
+						</select>
+                    </td>
+                    <td style="vertical-align: bottom;width: 20px;">
+                        <img src="/assets/remove-icon-png.png" width="20px" height="20px" />
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50px" class="data">Supplier No:</td>
+                    <td colspan="2"><input type="text" name="refNo" size="18" value="" class="data"></td>
+                </tr>
+                <tr>
+                    <td width="50px" class="data">Supplier Name:</td>
+                    <td colspan="2"><input type="text" name="refNo" size="18" value="" class="data"></td>
+                </tr>
+                <tr>
+                    <td width="50px" class="data">Supplier Email:</td>
+                    <td colspan="2"><input type="text" name="refNo" size="18" value="" class="data"></td>
+                </tr>
 
-		<!-- ===================================  Section 2 ==================================== -->
-		<div class="section2-1">
-			<table>
-				<tr >
-					<td width="100" class="data">Part Name:</td>
-					<td width="100" class="data" align="left"><input type="text"
-						name="refNo" size="14" value="" class="data"></td>
-				</tr>
+            </table>
+        </div>
+        <div class="section2-4">
+            <table>
+                <tr>
+                    <td width="50px" class="data">Reimbursments:</td>
+                    <td width="100px" class="data"><input type="text" name="refNo" size="14" value="" class="data"></td>
+                </tr>
 
-				<tr>
-					<td class="data">Part Number:</td>
-					<td class="data" align="left"><input type="text" name="refNo"
-						size="14" value="" class="data"></td>
-				</tr>
-
-				<tr>
-					<td class="data">Model(s):</td>
-					<td class="data" align="left"><input type="text" name="refNo"
-						size="14" value="" class="data"></td>
-				</tr>
-
-				<tr>
-					<td class="data">Model Year(s):</td>
-					<td class="data" align="left"><input type="text" name="refNo"
-						size="14" value="" class="data"></td>
-				</tr>
-
-				<tr>
+                <tr>
+                    <td width="50px" class="data">Adjustments:</td>
+                    <td width="100px" class="data"><input type="text" name="refNo" size="14" value="" class="data"></td>
+                </tr>
+                <!-- <tr>
 					<td class="data">Reference Report:</td>
 					<td class="data" align="left"><input type="text" name="refNo"
 						size="14" value="" class="data"></td>
-				</tr>
+				</tr> -->
+                <tr>
+                    <td width="50px" class="data">Groups:</td>
+                    <td width="100px" class="data"><input type="text" name="refNo" size="14" value="" class="data"></td>
+                </tr>
+                <tr>
+                    <td width="50px" class="data">WRP Indexing:</td>
+                    <td width="100px" class="data"><input type="checkbox" name="refNo" class="data"></td>
+                </tr>
+            </table>
+        </div>
 
-				<tr>
-					<td class="data">Groups:</td>
-					<td class="data" align="left"><input type="text" name="refNo"
-						size="14" value="" class="data"></td>
-				</tr>
+        <!-- ===================================  Section 3 ==================================== -->
 
+        <div class="section5-1 section" style="text-align: center; font-size: 12px;">
+            <div>
+                <mat-tab-group animationDuration="0ms">
+                    <mat-tab label="Problem"><br>
+                        <table align="center">
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <b>Description:</b>
+                                </td> &nbsp;
+                                <td style="text-align: left; vertical-align: top;">
+                                    <textarea style="text-align: left;" id="w3mission" rows="7" cols="100">This box will be populated with Cause Analysis field (under Cause Analysis tab) in QIS
+									</textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </mat-tab>
+                    <mat-tab label="Cause"><br>
+                        <table align="center">
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <b>Cause:</b>
+                                </td> &nbsp;
+                                <td style="text-align: left; vertical-align: top;">
+                                    <textarea style="text-align: left;" id="w3mission" rows="7" cols="100">This box will be poplated with Root Cause field (under Root Cause tab) in QIS
+									</textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </mat-tab>
+                    <mat-tab label="Countermeasure"><br>
+                        <table align="center" border="2" style="width:90%;">
+                            <tr>
+                                <th style="vertical-align: middle;background-color: rgb(205, 63, 70); width: 40%;">
+                                    C/M Title
+                                </th>
+                                <th style="vertical-align: middle;background-color: rgb(205, 63, 70);width: 50%;">
+                                    C/M Details
+                                </th>
+                                <th style="vertical-align: middle;background-color: rgb(205, 63, 70);width: 10%;">
+                                </th>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left; vertical-align: middle;width: 45%;">
+                                    <textarea style="text-align: left; width: 100%;" id="w3mission" rows="5">This box will be populated with Countermeasure title field (under Countermeasure tab) in QIS
+									</textarea>
+                                </td>
+                                <td style="text-align: left; vertical-align: middle;width: 50%;">
+                                    <textarea style="text-align: left;width: 100%;" id="w3mission" rows="5">This box will be populated with Countermeasure Details field (under Countermeasure tab) in QIS
+									</textarea>
+                                </td>
+                                <td style="text-align: left; vertical-align: middle;width: 5%;">
+                                    <a href="javascript:alert('Hello World!');">Delete</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: left; vertical-align: middle;width: 45%;">
+                                    <textarea style="text-align: left;width: 100%;" id="w3mission" rows="5">This box will be poplated with Root Cause field (under Root Cause tab) in QIS
+									</textarea>
+                                </td>
+                                <td style="text-align: left; vertical-align: middle;width: 50%;">
+                                    <textarea style="text-align: left;width: 100%;" id="w3mission" rows="5">This box will be poplated with Root Cause field (under Root Cause tab) in QIS
+									</textarea>
+                                </td>
+                                <td style="text-align: left; vertical-align: middle;width: 5%;">
+                                    <a href="javascript:alert('Hello World!');">Delete</a>
+                                </td>
+                            </tr>
+                        </table>
+                        <table align="center" style="width:90%;">
+                            <tr>
+                                <td colspan="3"><br></td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: top;width: 45%;">
+                                    <b>C/M Title: </b><textarea style="text-align: left;width: 90%;" id="w3mission" rows="5"></textarea>
+                                </td>
+                                <td style="vertical-align: top;width: 50%;">
+                                    <b>C/M Details: </b><textarea style="text-align: left;width: 90%;" id="w3mission" rows="5"></textarea>
+                                </td>
+                                <td style="vertical-align: bottom;width: 5%;">
+                                    <button valign="top" (click)="newoverrideForm.reset()" style="width: 40px;" type="submit" class="cqp-btn btn-space">Add</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </mat-tab>
+                    <mat-tab label="General Notes"><br>
+                        <table align="center">
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <b>Genral Notes:</b>
+                                </td> &nbsp;
+                                <td style="text-align: left; vertical-align: top;">
+                                    <textarea style="text-align: left;" id="w3mission" rows="7" cols="100">Notes for Supplier
+									</textarea>
+                                </td>
+                            </tr>
+                        </table>
+                    </mat-tab>
+                    <mat-tab label="Attachments">
+                        <table align="center" style="width: 100%;">
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <b><u>Images</u></b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table align="center" border="2">
+                                        <tr>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);"></th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Type
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Image
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Uploaded By
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Uploaded On
+                                            </th>
 
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="javascript:alert('Hello World!');">Delete</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Before C/M</td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="/assets/remove-icon-png.png">Before C/M</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="javascript:alert('Hello World!');">Delete</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">After C/M</td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="/assets/remove-icon-png.png">After C/M</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="javascript:alert('Hello World!');">Delete</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Image 1</td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="/assets/remove-icon-png.png">Image 1</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="javascript:alert('Hello World!');">Delete</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Image 2</td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="/assets/remove-icon-png.png">Image 2</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="javascript:alert('Hello World!');">Delete</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Image 3</td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="/assets/remove-icon-png.png">Image 3</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="javascript:alert('Hello World!');">Delete</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Image 4</td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="/assets/remove-icon-png.png">Image 4</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Type: </b><select name="Type" class="data">
+										<option value="ALL"	selected="selected">Select One</option>
+										<option value="1">Before C/M</option>
+										<option value="2">After C/M</option>							
+									</select>&nbsp;&nbsp;
+                                    <b>Image: </b><input type="text" name="ImagURL" size="14" value="" class="data">&nbsp;&nbsp;
+                                    <button valign="top" (click)="newoverrideForm.reset()" style="width: 40px;" type="submit" class="cqp-btn btn-space">Add</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                        </table>
+                        <table align="center" style="width: 100%;">
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <b><u>Attachments</u></b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table align="center" border="2">
+                                        <tr>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);"></th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Attachment Name
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Uploaded By
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Uploaded On
+                                            </th>
 
-			</table>
-		</div>
-		<div class="section2-2">
-			<table align="left">
-				<tr>
-					<td bgcolor="#FFFFFF" class="data">Claim Date Range:</td>
-					<td bgcolor="#FFFFFF" class="data"><mat-form-field appearance="outline" class="dateBox">
-					<input matInput [matDatepickerFilter]="dateFilter"
-						[matDatepicker]="cdpicker1" placeholder="Choose a date"> <mat-datepicker-toggle
-						matSuffix [for]="cdpicker1"></mat-datepicker-toggle> <mat-datepicker
-						#cdpicker1></mat-datepicker> </mat-form-field></td>
-				</tr>
-				<tr>
-					<td height="50" bgcolor="#FFFFFF" class="data">Build Date Range:</td>
-					<td bgcolor="#FFFFFF" class="data"><mat-form-field appearance="outline" class="dateBox">
-					<input matInput [matDatepickerFilter]="dateFilter"
-						[matDatepicker]="bdpicker1" placeholder="Choose a date"> <mat-datepicker-toggle
-						matSuffix [for]="bdpicker1"></mat-datepicker-toggle> <mat-datepicker
-						#bdpicker1></mat-datepicker> </mat-form-field></td>
-				</tr>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="javascript:alert('Hello World!');">Delete</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="/assets/remove-icon-png.png">File.pdf</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Michelle Powers</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="javascript:alert('Hello World!');">Delete</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="/assets/remove-icon-png.png">File.xls</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Michelle Powers</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="javascript:alert('Hello World!');">Delete</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <a href="/assets/remove-icon-png.png">File.txt</a>
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Michelle Powers</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <b>Attachment: </b><input type="text" name="ImagURL" size="20" value="" class="data">&nbsp;&nbsp;
+                                    <button valign="top" (click)="newoverrideForm.reset()" style="width: 40px;" type="submit" class="cqp-btn btn-space">Add</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </mat-tab>
+                    <mat-tab label="Honda Approval Logs">
+                        <table align="center">
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <b><u>Assign Approvers:</u></b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table align="center" border="2">
+                                        <tr>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Level
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Approver
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                Unit Team Lead
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <select name="UnitTM" class="data">
+													<option value="ALL"	selected="selected">Select One</option>
+													<option value="Keith">Keith Baldwin</option>
+													<option value="Sue">Sue Rizo</option>							
+												</select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                Cost Team Lead
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <select name="CostTM" class="data">
+													<option value="ALL"	selected="selected">Select One</option>
+													<option value="Keith">Keith Baldwin</option>
+													<option value="Sue">Sue Rizo</option>							
+												</select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                Cost Manager
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <select name="CostMgr" class="data">
+													<option value="ALL"	selected="selected">Select One</option>
+													<option value="Keith">Keith Baldwin</option>
+													<option value="Sue">Sue Rizo</option>							
+												</select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                Unit Manager
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <select name="UnitMgr" class="data">
+													<option value="ALL"	selected="selected">Select One</option>
+													<option value="Keith">Keith Baldwin</option>
+													<option value="Sue">Sue Rizo</option>							
+												</select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                Department Manger (US)
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <select name="DMUS" class="data">
+													<option value="ALL"	selected="selected">Select One</option>
+													<option value="Keith">Keith Baldwin</option>
+													<option value="Sue">Sue Rizo</option>							
+												</select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                Department Manger (JP)
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <select name="DMJP" class="data">
+													<option value="ALL"	selected="selected">Select One</option>
+													<option value="Keith">Keith Baldwin</option>
+													<option value="Sue">Sue Rizo</option>							
+												</select>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <br>
+                                </td>
+                            </tr>
+                        </table>
+                        <table align="center">
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <b><u>Approval Logs</u></b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table align="center" border="2">
+                                        <tr>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Level
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Approver
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Approval Status
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Approval Date
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Approver Comments
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">Unit Team Lead</td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">Approved</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                            <td style="text-align: left; vertical-align: middle;">Everything looks good</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">Cost Team Lead</td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">Approved</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                            <td style="text-align: left; vertical-align: middle;">Everything looks good</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">Cost Manager</td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">Approved</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                            <td style="text-align: left; vertical-align: middle;">Everything looks good</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">Unit Manager</td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">Approved</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                            <td style="text-align: left; vertical-align: middle;">Everything looks good</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">Department Manger (US)</td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">Approved</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                            <td style="text-align: left; vertical-align: middle;">Everything looks good</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">Department Manger (JP)</td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">Approved</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                            <td style="text-align: left; vertical-align: middle;">Everything looks good</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </mat-tab>
+                    <mat-tab label="Supplier Approval Logs">
+                        <table align="center">
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <b><u>Assign Approvers:</u></b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table align="center" border="2">
+                                        <tr>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Level
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Email
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Approver
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                Supplier Approver 1
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <select name="UnitTM" class="data">
+													<option value="ALL"	selected="selected">Select One</option>
+													<option value="Keith">Keith Baldwin</option>
+													<option value="Sue">Sue Rizo</option>							
+												</select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                Supplier Approver 2
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <select name="CostTM" class="data">
+													<option value="ALL"	selected="selected">Select One</option>
+													<option value="Keith">Keith Baldwin</option>
+													<option value="Sue">Sue Rizo</option>							
+												</select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                Supplier Approver 3
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <select name="CostMgr" class="data">
+													<option value="ALL"	selected="selected">Select One</option>
+													<option value="Keith">Keith Baldwin</option>
+													<option value="Sue">Sue Rizo</option>							
+												</select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                Supplier Approver 4
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                <select name="UnitMgr" class="data">
+													<option value="ALL"	selected="selected">Select One</option>
+													<option value="Keith">Keith Baldwin</option>
+													<option value="Sue">Sue Rizo</option>							
+												</select>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <br>
+                                </td>
+                            </tr>
+                        </table>
+                        <table align="center">
+                            <tr>
+                                <td style="vertical-align: top;">
+                                    <b><u>Approval Logs</u></b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table align="center" border="2">
+                                        <tr>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Level
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Approver
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Approval Status
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Approval Date
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70);">
+                                                Approver Comments
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">Supplier Approver 1</td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">Approved</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                            <td style="text-align: left; vertical-align: middle;">Everything looks good</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">Supplier Approver 2</td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">Approved</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                            <td style="text-align: left; vertical-align: middle;">Everything looks good</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">Supplier Approver 3</td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">Approved</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                            <td style="text-align: left; vertical-align: middle;">Everything looks good</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="text-align: left; vertical-align: middle;">Supplier Approver 4</td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">Approved</td>
+                                            <td style="text-align: left; vertical-align: middle;">06/21/2021</td>
+                                            <td style="text-align: left; vertical-align: middle;">Everything looks good</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </mat-tab>
+                    <!--<mat-tab label="Voucher">Voucher</mat-tab> -->
+                    <!-- <mat-tab label="Add'l QIS Info">Add'l QIS Info</mat-tab> -->
+                    <mat-tab label="Status Notes">
+                        <table align="center" style="width: 100%;">
+                            <!-- <tr>
+								<td style="vertical-align: top;">
+									<b><u>Status Notes</u></b> 
+								</td>
+							</tr> -->
+                            <tr>
+                                <td colspan="2"><br></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <table align="center" border="2" style="width: 90%;">
+                                        <tr>
+                                            <!-- <th style="vertical-align: middle;background-color: rgb(205, 63, 70);"></th> -->
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70); width: 60%;">
+                                                Notes
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70); width: 20%;">
+                                                Added By
+                                            </th>
+                                            <th style="vertical-align: middle;background-color: rgb(205, 63, 70); width: 20%;">
+                                                Added On
+                                            </th>
 
-				<tr>
-					<td valign="top">Supplier No:</td>
-					<td valign="top"><input type="text" name="refNo" size="18"
-						value="" class="data"></td>
-				</tr>
-
-				<tr>
-					<td valign="top">Supplier Name:</td>
-					<td valign="top"><input type="text" name="refNo" size="18"
-						value="" class="data"></td>
-				</tr>
-
-				<tr>
-					<td valign="top">Supplier Email:</td>
-					<td valign="top"><input type="text" name="refNo" size="18"
-						value="" class="data"></td>
-				</tr>
-
-				<tr>
-					<td valign="top">WRP Indexing:</td>
-					<td valign="bottom"><input type="checkbox" name="refNo"
-						class="data"></td>
-				</tr>
-			</table>
-
-		</div>
-		<div class="section2-3">
-			<table>
-				<tr align="left">
-					<td align="left" bgcolor="#FFFFFF" class="data">To:</td>
-					<td bgcolor="#FFFFFF" class="data"><mat-form-field appearance="outline" class="dateBox">
-					<input matInput [matDatepickerFilter]="dateFilter"
-						[matDatepicker]="cdpicker2" placeholder="Choose a date"> <mat-datepicker-toggle
-						matSuffix [for]="cdpicker2"></mat-datepicker-toggle> <mat-datepicker
-						#cdpicker2></mat-datepicker> </mat-form-field></td>
-				</tr>
-				<tr>
-					<td align="left" bgcolor="#FFFFFF" class="data">To:</td>
-					<td height="50"  bgcolor="#FFFFFF" class="data"><mat-form-field appearance="outline" class="dateBox">
-					<input matInput [matDatepickerFilter]="dateFilter"
-						[matDatepicker]="bdpicker2" placeholder="Choose a date"> <mat-datepicker-toggle
-						matSuffix [for]="bdpicker2"></mat-datepicker-toggle> <mat-datepicker
-						#bdpicker2></mat-datepicker> </mat-form-field></td>
-				</tr>
-
-				<tr>
-					<td valign="top">Plants</td>
-					<td><textarea id="plants" rows="4" cols="14">
-				HAM
-				</textarea></td>
-					<td align="left">
-						<button valign="top" (click)="newoverrideForm.reset()"
-							type="submit" class="cqp-btn btn-space">Add Plant</button>
-
-						<button valign="bottom" (click)="newoverrideForm.reset()"
-							type="submit" class="cqp-btn btn-space">Delete Plant</button>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<div class="section2-4">
-			<table>
-				<tr>
-					<td width="100" class="data">Reimbursments:</td>
-					<td width="100" class="data" align="left"><input type="text"
-						name="refNo" size="14" value="" class="data"></td>
-				</tr>
-
-				<tr>
-					<td class="data">Adjustments:</td>
-					<td class="data" align="left"><input type="text" name="refNo"
-						size="14" value="" class="data"></td>
-				</tr>
-				<tr>
-					<td width="100" class="data"></td>
-					<td>
-						<div class="box btn-group-vertical">
-							<p>WRP BTO</p>
-							<button (click)="assignMTC()" type="button"
-								class="cqp-btn btn-space">Assign MTC</button>
-							<button type="button" class="cqp-btn btn-space">Assign
-								Parts</button>
-							<button (click)="setCriteria()" type="button"
-								class="cqp-btn btn-space">Set Criteria</button>
-
-						</div>
-					</td>
-				</tr>
-			</table>
-		</div>
-
-		<div class="section3-1">
-
-			<table>
-				<tr>
-					<td align="left">
-						<button (click)="newoverrideForm.reset()" type="submit"
-							class="cqp-btn">Update</button>
-					</td>
-					<td><button (click)="newoverrideForm.reset()" type="submit"
-							class="cqp-btn">Cancel</button></td>
-					<td><button (click)="newoverrideForm.reset()" type="submit"
-							class="cqp-btn">Delete</button></td>
-				</tr>
-				<tr>
-
-				</tr>
-			</table>
-			<br>
-			<table width="100%" id="ctbl-004" border="1" class="colheadactive">
-				<thead>
+                                        </tr>
+                                        <tr>
+                                            <!-- <td style="text-align: left; vertical-align: middle;">
+												<a href="javascript:alert('Hello World!');">Delete</a>
+											</td> -->
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                SR having to re-run data to add 2020 MY after discussion with Scott Hunter
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Michelle Powers</td>
+                                            <td style="text-align: left; vertical-align: middle;">11/25/2020 2:30:53 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <!-- <td style="text-align: left; vertical-align: middle;">
+												<a href="javascript:alert('Hello World!');">Delete</a>
+											</td> -->
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                WRP sent to Yoshihiko Tanaguchi at Bosch
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Keith Baldwin</td>
+                                            <td style="text-align: left; vertical-align: middle;">12/16/2020 12:36:24 PM</td>
+                                        </tr>
+                                        <tr>
+                                            <!-- <td style="text-align: left; vertical-align: middle;">
+												<a href="javascript:alert('Hello World!');">Delete</a>
+											</td> -->
+                                            <td style="text-align: left; vertical-align: middle;">
+                                                Nabbus Nasser of Bosch replied back on 1/6/21
+                                            </td>
+                                            <td style="text-align: left; vertical-align: middle;">Michelle Powers</td>
+                                            <td style="text-align: left; vertical-align: middle;">01/11/2021 5:25:51 PM</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><br></td>
+                            </tr>
+                            <tr align="center">
+                                <td style="vertical-align: top;" align="right">
+                                    <b>Notes: </b>
+                                </td>
+                                <td align="left">
+                                    <textarea style="text-align: left;width: 50%;" id="w3mission" rows="5"></textarea>&nbsp;&nbsp;
+                                    <button (click)="newoverrideForm.reset()" style="width: 40px;vertical-align: bottom;" type="submit" class="cqp-btn btn-space">Add</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </mat-tab>
+                </mat-tab-group>
+            </div>
+        </div>
+        <!-- <div class="section6" style="border: black; width: 95%;">			
+				<table border="black" style="width: 95%;" >
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-
-						<th scope="colgroup" colspan="4" bgcolor="#E9E9E9">HAM</th>
-						<th scope="colgroup" colspan="4" bgcolor="#E9E9E9">SUPPLIER</th>
+						<td style="width: 16%;"> <b> Before C/M </b> <br>
+							<img src="/assets/hst_banner.jpg" width="100%" height="100px"/><br>
+							<button style="margin: 4px;" (click)="newoverrideForm.reset()" type="submit" class="cqp-btn">Upload</button>
+							<button style="margin: 4px;" (click)="newoverrideForm.reset()" type="submit" class="cqp-btn">Remove</button>
+						</td>
+						<td style="width: 16%;"> <b> After C/M </b> <br>
+							<img src="/assets/hst_banner.jpg" width="100%" height="100px"/><br>
+							<button style="margin: 4px;" (click)="newoverrideForm.reset()" type="submit" class="cqp-btn">Upload</button>
+							<button style="margin: 4px;" (click)="newoverrideForm.reset()" type="submit" class="cqp-btn">Remove</button>
+						</td>
+						<td style="width: 16%;"> <b> Image1 </b> <br>
+							<img src="/assets/hst_banner.jpg" width="100%" height="100px"/><br>
+							<button style="margin: 4px;" (click)="newoverrideForm.reset()" type="submit" class="cqp-btn">Upload</button>
+							<button style="margin: 4px;" (click)="newoverrideForm.reset()" type="submit" class="cqp-btn">Remove</button>
+						</td>
+						<td style="width: 16%;"> <b> Image2 </b> <br>
+							<img src="/assets/hst_banner.jpg" width="100%" height="100px"/><br>
+							<button style="margin: 4px;" (click)="newoverrideForm.reset()" type="submit" class="cqp-btn">Upload</button>
+							<button style="margin: 4px;" (click)="newoverrideForm.reset()" type="submit" class="cqp-btn">Remove</button>
+						</td>
+						<td style="width: 16%;"> <b> Image3 </b> <br>
+							<img src="/assets/hst_banner.jpg" width="100%" height="100px"/><br>
+							<button style="margin: 4px;" (click)="newoverrideForm.reset()" type="submit" class="cqp-btn">Upload</button>
+							<button style="margin: 4px;" (click)="newoverrideForm.reset()" type="submit" class="cqp-btn">Remove</button>
+						</td>
+						<td style="width: 16%;"> <b> Image4 </b> <br>
+							<img src="/assets/hst_banner.jpg" width="100%" height="100px"/><br>
+							<button style="margin: 4px;" (click)="newoverrideForm.reset()" type="submit" class="cqp-btn">Upload</button>
+							<button style="margin: 4px;" (click)="newoverrideForm.reset()" type="submit" class="cqp-btn">Remove</button>
+						</td>
 					</tr>
+				</table>			
+		</div> -->
+        <div class="section5-2 btn-group-vertical" style="margin: 40px; margin-top: 1px">
+            <button type="button" class="cqp-btn btn-space-last">Save</button>&nbsp;&nbsp;&nbsp;
+            <button type="button" class="cqp-btn btn-space-last">Cancel</button>&nbsp;&nbsp;&nbsp;
+            <button type="button" class="cqp-btn btn-space-last">Print</button>&nbsp;&nbsp;&nbsp;
+            <!-- <button (click)="addUpdateImages()" type="button"
+				class="cqp-btn btn-space-last">Add/Update Image</button> -->
+            <button type="button" class="cqp-btn btn-space-last">Close</button><br>
+            <button type="button" class="cqp-btn btn-space-last">Print Status Notes</button>&nbsp;&nbsp;&nbsp;
+            <button type="button" class="cqp-btn btn-space-last">Submit for Approval</button>&nbsp;&nbsp;&nbsp;
+            <button type="button" class="cqp-btn btn-space-last">Reject</button>&nbsp;&nbsp;&nbsp;
+            <button type="button" class="cqp-btn btn-space-last">Inactivate</button>
+
+        </div>
+        <div class="section3-1" style="width: 98.6%; position: sticky;">
+
+            <table align="center" style="width: 100%;">
+                <tr>
+                    <td style="vertical-align: top;" align="center">
+                        <b><u>Plant Summary</u></b>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td>
+                        <table align="center" border="2" style="width: 60%; text-align: center;vertical-align: middle;">
+                            <tr>
+                                <th style="background-color: rgb(205, 63, 70); width: 10%;">Plant</th>
+                                <th style="background-color: rgb(205, 63, 70);width: 30%;">
+                                    Current Amount
+                                </th>
+                                <th style="background-color: rgb(205, 63, 70);width: 30%;">
+                                    Future Amount
+                                </th>
+                                <th style="background-color: rgb(205, 63, 70);width: 30%;">
+                                    Total Amount
+                                </th>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    HMA
+                                </td>
+                                <td>
+                                    $120
+                                </td>
+                                <td>$240</td>
+                                <td>$360</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    HAM
+                                </td>
+                                <td>
+                                    $100
+                                </td>
+                                <td>$200</td>
+                                <td>$300</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    HDMA
+                                </td>
+                                <td>
+                                    $500
+                                </td>
+                                <td>$1000</td>
+                                <td>$1500</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><br><br></td>
+                </tr>
+            </table>
+
+            <table style="width: 100%; background-color: lightgray;">
+                <tr>
+                    <td style="border: 1px solid gray; width: 105px; text-align: center; background-color: white;">
+                        <span style="display:inline-block;font-family:Arial;font-size:Small;height:70px;width:105px;align-content: initial"> Part#</span>
+
+                    </td>
+                    <td style="text-align: center;">
+                        <table style="border: 1px solid gray; width: 100%; background-color: lightgray;" cellpadding="0" cellspacing="0">
+
+
+                            <tr style="height: 25px; background-color: rgb(243, 240, 152)">
+                                <td colspan="2" style="border: 1px solid gray;">
+                                    <span style="color:Black;font-family:Arial;font-size:Small;">Part Name</span></td>
+                                <td colspan="2" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Model</span></td>
+                                <td style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Model Year</span></td>
+                                <td style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Factory</span></td>
+                                <td style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Market</span></td>
+                                <td colspan="2" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">MTC</span></td>
+                                <td style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">MTC Type</span></td>
+                            </tr>
+                            <tr style="height: 25px; background-color: lightgreen;">
+                                <td style="border: 1px solid gray; width: 10%;">
+                                    <span style="color:Black;font-family:Arial;font-size:Small;">Qty Claims</span></td>
+                                <td style="border: 1px solid gray;width:15%;">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small">Claims per Month</span></td>
+                                <td style="border: 1px solid gray;width:10%;">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small">Months Left</span></td>
+                                <td style="border: 1px solid gray;width:10%;">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Analyzed</span></td>
+                                <td style="border: 1px solid gray;width:10%;">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Problem</span></td>
+                                <td style="border: 1px solid gray;width:10%;">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Responsibility</span></td>
+                                <td style="border: 1px solid gray;width:10%;">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Flat Rate</span>
+                                </td>
+                                <td style="border: 1px solid gray;width:8%;">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Labor Rate</span>
+                                </td>
+                                <td style="border: 1px solid gray;width:7%;">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">FOB</span>
+                                </td>
+                                <td style="border: 1px solid gray;width:10%;">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Dlr Net</span>
+                                </td>
+                            </tr>
+                            <tr style="height: 25px; background-color: rgb(243, 240, 152)">
+                                <td colspan="2" style="border: 1px solid gray;">
+                                    <span style="color:Black;font-family:Arial;font-size:Small;">Honda Part Cost</span></td>
+                                <td colspan="2" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Honda Labor</span></td>
+                                <td colspan="2" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Honda Handling</span></td>
+                                <td colspan="4" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Honda Total</span></td>
+                            </tr>
+                            <tr style="height: 25px; background-color: lightgreen;">
+                                <td colspan="2" style="border: 1px solid gray;">
+                                    <span style="color:Black;font-family:Arial;font-size:Small;">Supplier Part Cost</span></td>
+                                <td colspan="2" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Supplier Labor</span></td>
+                                <td colspan="2" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Supplier Handling</span></td>
+                                <td colspan="4" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">Supplier Total</span></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table style="width: 100%; background-color: lightgray;">
+                <tr>
+                    <td style="border: 1px solid gray; background-color: white; width: 105px; text-align: center;">
+                        <span style="display:inline-block;font-family:Arial;font-size:Small;height:30px;width:105px;align-content: initial"> 04818TVAA00ZB </span><br>
+                        <a href="javascript:alert('Hello World!');">Update</a>&nbsp;&nbsp;
+                        <a href="javascript:alert('Hello World!');">Delete</a>
+                    </td>
+                    <td style="text-align: center;">
+                        <table style="border: 1px solid gray; width: 100%" cellpadding="0" cellspacing="0">
+                            <tr style="height: 25px; background-color: rgb(243, 240, 152);">
+                                <td colspan="2" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;word-wrap: normal; word-break: break-all;">OTR ST, L. *NH882L*</span>
+                                </td>
+                                <td colspan="2" style="border: 1px solid gray;">
+                                    <select name="Model" style="width: 90%;">
+										<option value="ALL"	selected="selected">Select One</option>
+										<option value="Accord">Accord</option>
+										<option value="Civic">Civic</option>
+										<option value="CRV">CRV</option>							
+									</select>
+                                </td>
+                                <td style="border: 1px solid gray;">
+                                    <select name="Model Year" style="width: 90%;">
+										<option value="ALL"	selected="selected">Select One</option>
+										<option value="2021">2021</option>
+										<option value="2020">2020</option>
+										<option value="2019">2019</option>							
+									</select>
+                                </td>
+                                <td style="border: 1px solid gray;">
+                                    <select name="Plant" style="width: 90%;">
+										<option value="ALL"	selected="selected">Select One</option>
+										<option value="MAP">MAP</option>
+										<option value="ELP">ELP</option>
+										<option value="HMA">HMA</option>							
+									</select>
+                                </td>
+                                <td style="border: 1px solid gray;">
+                                    <select name="Market" style="width: 90%;">
+										<option value="ALL"	selected="selected">All</option>
+										<option value="KA">KA</option>
+										<option value="KL">KL</option>
+										<option value="KC">KC</option>							
+									</select>
+                                </td>
+                                <td colspan="2" style="border: 1px solid gray; ">
+                                    <ng-multiselect-dropdown [placeholder]="'Select'" [settings]="dropdownSettings" [data]="dropdownList" [(ngModel)]="selectedItems" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+                                    </ng-multiselect-dropdown>
+                                </td>
+                                <td style="border: 1px solid gray; ">
+                                    <ng-multiselect-dropdown [placeholder]="'Select'" [settings]="dropdownSettings" [data]="dropdownList" [(ngModel)]="selectedItems" (onSelect)="onItemSelect($event)" (onSelectAll)="onSelectAll($event)">
+                                    </ng-multiselect-dropdown>
+                                </td>
+                            </tr>
+                            <tr style="height: 25px; background-color: lightgreen;">
+                                <td style="border: 1px solid gray; width: 10%;">
+                                    <!-- <span style="color:Black;font-family:Arial;font-size:Small;">1585</span> -->
+                                    <input type="text" name="QtyClm" readonly="true" value="1585" class="data" style="width: 90%;">
+                                </td>
+                                <td style="border: 1px solid gray;width:15%;">
+                                    <!-- <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small">17</span> -->
+                                    <input type="text" name="ClmPerMth" readonly="true" value="17" class="data" style="width: 90%;">
+                                </td>
+                                <td style="border: 1px solid gray;width:10%;">
+                                    <!-- <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small">20</span> -->
+                                    <input type="text" name="MthLeft" readonly="true" value="20" class="data" style="width: 90%;">
+                                </td>
+                                <td style="border: 1px solid gray;width:10%;">
+                                    <!-- <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;"></span> -->
+                                    <input type="text" name="Analyzed" readonly="true" value="" class="data" style="width: 90%;">
+                                </td>
+                                <td style="border: 1px solid gray;width:10%;">
+                                    <!-- <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;"></span> -->
+                                    <input type="text" name="Problem" readonly="true" value="" class="data" style="width: 90%;">
+                                </td>
+                                <td style="border: 1px solid gray;width:10%;">
+                                    <!-- <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">0.4024</span> -->
+                                    <input type="text" name="Analyzed" readonly="true" value="0.4024" class="data" style="width: 90%;">
+                                </td>
+                                <td style="border: 1px solid gray;width:10%;">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">1.40</span>
+                                </td>
+                                <td style="border: 1px solid gray;width:8%;">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">$127.00</span>
+                                </td>
+                                <td style="border: 1px solid gray;width:7%;">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">$177.44</span>
+                                </td>
+                                <td style="border: 1px solid gray;width:10%;">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">$528.74</span>
+                                </td>
+                            </tr>
+                            <tr style="height: 25px; background-color: rgb(243, 240, 152)">
+                                <td colspan="2" style="border: 1px solid gray;">
+                                    <span style="color:Black;font-family:Arial;font-size:Small;">$475.87</span></td>
+                                <td colspan="2" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">$177.80</span></td>
+                                <td colspan="2" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">$380.69</span></td>
+                                <td colspan="4" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">$1034.3</span></td>
+                            </tr>
+                            <tr style="height: 25px; background-color: lightgreen;">
+                                <td colspan="2" style="border: 1px solid gray;">
+                                    <span style="color:Black;font-family:Arial;font-size:Small;">$354.88</span></td>
+                                <td colspan="2" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">$177.80</span></td>
+                                <td colspan="2" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">$380.69</span></td>
+                                <td colspan="4" style="border: 1px solid gray">
+                                    <span style="display:inline-block;color:Black;font-family:Arial;font-size:Small;">$913.37</span></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table style="width: 100%;">
+                <tr>
+                    <td align="center">
+                        <br>
+                        <b>Part#: </b> <input type="text" name="NewPart#" value="" class="data" style="width: 30%;">&nbsp;&nbsp;
+                        <button valign="top" (click)="newoverrideForm.reset()" style="width: 40px;" type="submit" class="cqp-btn btn-space">Add</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- <div class="section3-1">
+
+			<table width="100%" id="ctbl-004" border="1" class="colheadactive">
+				<thead>					
 					<tr bgcolor="#E9E9E9">
-						<th scope="col">Part Category</th>
-						<th scope="col">Name</th>
-						<th scope="col">Flat</th>
-						<th scope="col">Labor rate</th>
-						<th scope="col">FOB</th>
-						<th scope="col">Dir Net</th>
-						<th scope="col">Part Cost</th>
-						<th scope="col">Labor</th>
-						<th scope="col">Handling</th>
-						<th scope="col">Total</th>
-						<th scope="col">Part Cost</th>
-						<th scope="col">Labor</th>
-						<th scope="col">Handling</th>
+						<th scope="col">Part#</th>
+						<th scope="col">Part Name</th>
+						<th scope="col">Model</th>
+						<th scope="col">Model Year</th>
+						<th scope="col">Plant</th>
+						<th scope="col">Market</th>
+						<th scope="col">MTC</th>
+						<th scope="col">MTC Type</th>
+						<th scope="col">Qty Claims</th>
+						<th scope="col">Claims per Month</th>
+						<th scope="col">Month Left</th>
+						<th scope="col">Analyzed</th>
+						<th scope="col">Problem</th>
+						<th scope="col">Responsibility</th>
 						<th scope="col">Total</th>
 					</tr>
 				</thead>
 				<tbody>
 
 					<tr>
-						<td>Wholesale</td>
+						<td><input type="text" name="Source" size="10" value="" class="data"></td>
 						<td>Name 1</td>
-						<td>$1.25</td>
-						<td>$1.20</td>
-						<td>$1.00</td>
-						<td>Wholesale</td>
-						<td>$1.00</td>
-						<td>$1.25</td>
-						<td>$1.20</td>
-						<td>$1.00</td>
-						<td>Wholesale</td>
-						<td>$1.00</td>
-						<td>$1.25</td>
-						<td>$1.20</td>
+						<td>
+							<select	name="Model" class="data">
+								<option value="ALL"	selected="selected">Select One</option>
+								<option value="Accord">Accord</option>
+								<option value="Civic">Civic</option>
+								<option value="CRV">CRV</option>							
+							</select>
+						</td>
+						<td>
+							<select	name="Model Year" class="data">
+								<option value="ALL"	selected="selected">Select One</option>
+								<option value="2021">2021</option>
+								<option value="2020">2020</option>
+								<option value="2019">2019</option>							
+							</select>
+						</td>
+						<td>
+							<select	name="Plant" class="data">
+								<option value="ALL"	selected="selected">Select One</option>
+								<option value="MAP">MAP</option>
+								<option value="ELP">ELP</option>
+								<option value="HMA">HMA</option>							
+							</select>
+						</td>
+						<td>
+							<select	name="Market" class="data">
+								<option value="ALL"	selected="selected">All</option>
+								<option value="KA">KA</option>
+								<option value="KL">KL</option>
+								<option value="KC">KC</option>							
+							</select>
+						</td>						
+						<td><input type="text" name="QtyClm" size="5" value="" class="data"></td>
+						<td><input type="text" name="ClmPerMth" size="5" value="" class="data"></td>
+						<td><input type="text" name="MthLeft" size="5" value="" class="data"></td>
+						<td><input type="text" name="Analyzed" size="5" value="" class="data"></td>
+						<td><input type="text" name="Problem" size="5" value="" class="data"></td>
+						<td><input type="text" name="Responsibility" size="5" value="" class="data"></td>
+						<td>$1000</td>
 					</tr>
 					<tr>
-						<td>Retail</td>
-						<td>Name 2</td>
-						<td>$3.00</td>
-						<td>$1.80</td>
-						<td>$1.60</td>
-						<td>Retail</td>
-						<td>$2.00</td>
-						<td>$3.00</td>
-						<td>$1.80</td>
-						<td>$1.60</td>
-						<td>Retail</td>
-						<td>$2.00</td>
-						<td>$3.00</td>
-						<td>$1.80</td>
-
+						<td><input type="text" name="Source" size="10" value="" class="data"></td>
+						<td>Name 1</td>
+						<td>
+							<select	name="Model" class="data">
+								<option value="ALL"	selected="selected">Select One</option>
+								<option value="Accord">Accord</option>
+								<option value="Civic">Civic</option>
+								<option value="CRV">CRV</option>							
+							</select>
+						</td>
+						<td>
+							<select	name="Model Year" class="data">
+								<option value="ALL"	selected="selected">Select One</option>
+								<option value="2021">2021</option>
+								<option value="2020">2020</option>
+								<option value="2019">2019</option>							
+							</select>
+						</td>
+						<td>
+							<select	name="Plant" class="data">
+								<option value="ALL"	selected="selected">Select One</option>
+								<option value="MAP">MAP</option>
+								<option value="ELP">ELP</option>
+								<option value="HMA">HMA</option>							
+							</select>
+						</td>
+						<td>
+							<select	name="Market" class="data">
+								<option value="ALL"	selected="selected">All</option>
+								<option value="KA">KA</option>
+								<option value="KL">KL</option>
+								<option value="KC">KC</option>							
+							</select>
+						</td>						
+						<td><input type="text" name="QtyClm" size="5" value="" class="data"></td>
+						<td><input type="text" name="ClmPerMth" size="5" value="" class="data"></td>
+						<td><input type="text" name="MthLeft" size="5" value="" class="data"></td>
+						<td><input type="text" name="Analyzed" size="5" value="" class="data"></td>
+						<td><input type="text" name="Problem" size="5" value="" class="data"></td>
+						<td><input type="text" name="Responsibility" size="5" value="" class="data"></td>
+						<td>$1000</td>
 					</tr>
 
 				</tbody>
@@ -346,67 +1389,12 @@
 						<button style="margin: 2px;" (click)="newoverrideForm.reset()"
 							type="submit" class="cqp-btn">Delete</button>
 					</td>
-				</tr>
-				<br>
-				<tr>
-					<table id="ctbl-004" border="1" class="colheadactive">
-						<colgroup>
-							<col span="1">
-							<col span="1">
-						</colgroup>
-						<colgroup span="2">
-						</colgroup>
-						<thead>
-
-							<tr bgcolor="#E9E9E9">
-								<th scope="col">Market</th>
-								<th scope="col">Part</th>
-								<th scope="col">Year</th>
-								<th scope="col">Model</th>
-								<th scope="col">Part Category</th>
-								<th scope="col">Qty Claim</th>
-								<th scope="col">Clm/Mth</th>
-								<th scope="col">Mth Left</th>
-								<th scope="col">Qty Analyzed</th>
-								<th scope="col">Qty w/Pblm</th>
-								<th scope="col">Sup Resp</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Wholesale</td>
-								<td>Part 1</td>
-								<td>2004</td>
-								<td>Civic</td>
-								<td>Wholesale</td>
-								<td>12</td>
-								<td>4</td>
-								<td>5</td>
-								<td>45</td>
-								<td>Wholesale</td>
-								<td>resp2</td>
-							</tr>
-							<tr>
-								<td>Retail</td>
-								<td>Part 2</td>
-								<td>2005</td>
-								<td>Honda</td>
-								<td>Retail</td>
-								<td>55</td>
-								<td>3</td>
-								<td>6</td>
-								<td>4</td>
-								<td>Retail</td>
-								<td>resp1</td>
-							</tr>
-						</tbody>
-					</table>
-				</tr>
+				</tr>				
 			</table>
 
-		</div>
+		</div>  -->
 
-		<div class="section4-2" style="margin: 40px;">
+        <!-- <div class="section4-2" style="margin: 40px;">
 
 			<table border="1" class="colheadactive">
 				<col>
@@ -462,393 +1450,7 @@
 					<td></td>
 				</tr>
 			</table>
-		</div>
+		</div> -->
 
-		<div class="section5-1 section" style="width: 1000px; text-align: center; font-size: 12px">
-		    
-			<div>			
-				<mat-tab-group animationDuration="0ms"> 
-					<mat-tab label="Problem Description"><br>
-					<textarea align="center" id="w3mission" rows="10" cols="80">
-					Description: The voucher and the covering letter which will now be created 
-					will be a pdf file as opposed to the earlier Microsoft excel file.  
-					(All data must be stored in new WRP tables). The manual voucher 
-					data will be stored in the table tblWRP_VoucherManual and the table 
-					will not be deleted. The monthly job needs to be modified so that 
-					it will store data in a table tblWRP_VoucherJob. The structure of 
-					the table tblWRP_VoucherJob will be like the table tblWRP_CoverSheetData 
-					and will be copied to the tblWRP_VoucherJob during inserting data 
-					into the table tblWRP_CoverSheetData and rebuilding the Voucher
-					</textarea>
-					
-					</mat-tab> 
-					<mat-tab label="Causes"><br>
-					<textarea align="center" id="w3mission" rows="10" cols="80">
-					Causes:	The address editor screen will not be used anymore, and the details 
-					of the Supplier will be fetched from the CQP table tblCQ_SUPPLIER_INFO. 
-					The summary edit screen will have fields supplier number and supplier 
-					name to enter the supplier details, the corresponding supplier address 
-					will be fetched from the table tblCQ_SUPPLIER_INFO.
-					</textarea>
-					</mat-tab> 
-					<mat-tab label="Countermeasure Contents"><br>
-					<textarea align="center" id="w3mission" rows="10" cols="80">
-					Contents:	The address editor screen will not be used anymore, and the details 
-					of the Supplier will be fetched from the CQP table tblCQ_SUPPLIER_INFO. 
-					The summary edit screen will have fields supplier number and supplier 
-					name to enter the supplier details, the corresponding supplier address 
-					will be fetched from the table tblCQ_SUPPLIER_INFO.
-					</textarea>
-					</mat-tab> 
-					<mat-tab label="General Notes">
-					<br>
-					<textarea align="center" id="w3mission" rows="10" cols="80">
-					General Notes:	The address editor screen will not be used anymore, and the details 
-					of the Supplier will be fetched from the CQP table tblCQ_SUPPLIER_INFO. 
-					The summary edit screen will have fields supplier number and supplier 
-					name to enter the supplier details, the corresponding supplier address 
-					will be fetched from the table tblCQ_SUPPLIER_INFO.
-					
-					The voucher and the covering letter which will now be created 
-					will be a pdf file as opposed to the earlier Microsoft excel file.  
-					(All data must be stored in new WRP tables). The manual voucher 
-					data will be stored in the table tblWRP_VoucherManual and the table 
-					will not be deleted. The monthly job needs to be modified so that 
-					it will store data in a table tblWRP_VoucherJob. The structure of 
-					the table tblWRP_VoucherJob will be like the table tblWRP_CoverSheetData 
-					and will be copied to the tblWRP_VoucherJob during inserting data 
-					into the table tblWRP_CoverSheetData and rebuilding the Voucher
-					</textarea>
-					</mat-tab> 
-			<mat-tab label="Honda Approvals">
-				<br>
-				<table width="60%" align="center" border="1" cellpadding="2"
-				cellspacing="0">
-				<tr>
-					<td colspan="3" bgcolor="#990000" style="color: white;">Approvers</td>
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Level</td>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Name</td>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Date Appoved</td>
-					
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Unit Team Lead</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">
-						<select
-						name="approvername" class="data"><option value="ALL"
-								selected="selected">Select One</option>
-							<option value="issuer1">Approver 1</option>
-							<option value="issuer1">Approver 2</option>
-							<option value="issuer1">Approver 3</option>
-							<option value="issuer1">Approver 4</option>
-					</select>
-					</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"><input type="datetime-local" name="dateapproved" id=""></td>
-					
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Cost Team Lead</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">
-						<select
-						name="approvername" class="data"><option value="ALL"
-								selected="selected">Select One</option>
-							<option value="issuer1">Approver 1</option>
-							<option value="issuer1">Approver 2</option>
-							<option value="issuer1">Approver 3</option>
-							<option value="issuer1">Approver 4</option>
-					</select>
-					</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"><input type="datetime-local" name="dateapproved" id=""></td>
-					
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Cost Manager</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">
-						<select
-						name="approvername" class="data"><option value="ALL"
-								selected="selected">Select One</option>
-							<option value="issuer1">Approver 1</option>
-							<option value="issuer1">Approver 2</option>
-							<option value="issuer1">Approver 3</option>
-							<option value="issuer1">Approver 4</option>
-					</select>
-					</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"><input type="datetime-local" name="dateapproved" id=""></td>
-					
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Unit Manager</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">
-						<select
-						name="approvername" class="data"><option value="ALL"
-								selected="selected">Select One</option>
-							<option value="issuer1">Approver 1</option>
-							<option value="issuer1">Approver 2</option>
-							<option value="issuer1">Approver 3</option>
-							<option value="issuer1">Approver 4</option>
-					</select>
-					</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"><input type="datetime-local" name="dateapproved" id=""></td>
-					
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Department Manager (US)</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">
-						<select
-						name="approvername" class="data"><option value="ALL"
-								selected="selected">Select One</option>
-							<option value="issuer1">Approver 1</option>
-							<option value="issuer1">Approver 2</option>
-							<option value="issuer1">Approver 3</option>
-							<option value="issuer1">Approver 4</option>
-					</select>
-					</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"><input type="datetime-local" name="dateapproved" id=""></td>
-					
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Department Manager (J)</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">
-						<select
-						name="approvername" class="data"><option value="ALL"
-								selected="selected">Select One</option>
-							<option value="issuer1">Approver 1</option>
-							<option value="issuer1">Approver 2</option>
-							<option value="issuer1">Approver 3</option>
-							<option value="issuer1">Approver 4</option>
-					</select>
-					</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"><input type="datetime-local" name="dateapproved" id=""></td>
-					
-				</tr>
-				</table>
-				<br>
-				<table width="80%" align="center" border="1" cellpadding="2"
-				cellspacing="0">
-				<tr>
-					<td bgcolor="#990000" colspan="5" style="color: white;">Approval Logs</td>
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Level</td>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Name</td>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Status Change</td>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Date Appoved</td>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Notes</td>
-					
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Unit Team Lead</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Shephard</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Approved</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">6/14/2021 10:00</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Looks good</td>
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Cost Team Lead</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">John Doe</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Approved</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">6/15/2021 10:00</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Cost Manager</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">John Doe</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Status Change</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">6/15/2021 14:00</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Everything looks good</td>
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Unit Manager</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">John Smith</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Rejected</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">6/16/2021 10:00</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Rejected because missing Cpunter Measures info</td>
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Unit Manager</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">John Smith</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Apporved</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">6/16/2021 15:00</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Counter Measures info added</td>
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Department Manager (US)</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Department Manager (J)</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-				</tr>
-				
-				</table>
-			</mat-tab> 
-			 <mat-tab label="Supplier Approvals">
-				 <br>
-				<table width="60%" align="center" border="1" cellpadding="2"
-				cellspacing="0">
-				<tr>
-					<td colspan="4" bgcolor="#990000" style="color: white;">Approvers</td>
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Level</td>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Name</td>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Email</td>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Date Appoved</td>
-					
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Supplier Approver 1</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">
-						<select
-						name="approvername" class="data"><option value="ALL"
-								selected="selected">Select One</option>
-							<option value="issuer1">Approver 1</option>
-							<option value="issuer1">Approver 2</option>
-							<option value="issuer1">Approver 3</option>
-							<option value="issuer1">Approver 4</option>
-					</select>
-					</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"><input type="datetime-local" name="dateapproved" id=""></td>
-					
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Supplier Approver 2</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">
-						<select
-						name="approvername" class="data"><option value="ALL"
-								selected="selected">Select One</option>
-							<option value="issuer1">Approver 1</option>
-							<option value="issuer1">Approver 2</option>
-							<option value="issuer1">Approver 3</option>
-							<option value="issuer1">Approver 4</option>
-					</select>
-					</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"><input type="datetime-local" name="dateapproved" id=""></td>
-					
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Supplier Approver 3</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">
-						<select
-						name="approvername" class="data"><option value="ALL"
-								selected="selected">Select One</option>
-							<option value="issuer1">Approver 1</option>
-							<option value="issuer1">Approver 2</option>
-							<option value="issuer1">Approver 3</option>
-							<option value="issuer1">Approver 4</option>
-					</select>
-					</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"><input type="datetime-local" name="dateapproved" id=""></td>
-					
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Supplier Approver 4</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">
-						<select
-						name="approvername" class="data"><option value="ALL"
-								selected="selected">Select One</option>
-							<option value="issuer1">Approver 1</option>
-							<option value="issuer1">Approver 2</option>
-							<option value="issuer1">Approver 3</option>
-							<option value="issuer1">Approver 4</option>
-					</select>
-					</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"><input type="datetime-local" name="dateapproved" id=""></td>
-					
-				</tr>
-				</table>
-				<br>
-				<table width="80%" align="center" border="1" cellpadding="2"
-				cellspacing="0">
-				<tr>
-					<td bgcolor="#990000" colspan="5" style="color: white;">Approval Logs</td>
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Level</td>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Name</td>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Status Change</td>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Date Appoved</td>
-					<td width="3%"  bgcolor="#990000" class="data" style="color: white;">Notes</td>
-					
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Supplier Approver 1</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Shephard</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Approved</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">6/14/2021 10:00</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Looks good</td>
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Supplier Approver 2</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">John Doe</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Approved</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">6/15/2021 10:00</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data"></td>
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Supplier Approver 3</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">John Doe</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Status Change</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">6/15/2021 14:00</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Everything looks good</td>
-				</tr>
-				<tr>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Supplier Approver 4</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">John Smith</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Rejected</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">6/16/2021 10:00</td>
-					<td width="3%"  bgcolor="#FFFFFF" class="data">Rejected because missing Cpunter Measures info</td>
-				</tr>
-				</table>
-			</mat-tab> 
-					<mat-tab label="Claim Est">Claim Est</mat-tab> 
-					<mat-tab label="Add'l OIS Info">Addt'l OIS Info</mat-tab>
-					<mat-tab label="Status Notes">Status Notes</mat-tab> 
-					<mat-tab label="."></mat-tab> 
-			</mat-tab-group>
-			</div>
-
-		</div>
-		<div class="section6-1">
-			<table align="center" border="0" cellpadding="2" cellspacing="0">
-				<tr>
-					<td>
-						<button type="button" class="cqp-btn btn-space-last">Save</button>
-			<button type="button" class="cqp-btn btn-space-last">Print
-				Status Notes</button>
-					</td>
-					<td>
-						<button type="button" class="cqp-btn btn-space-last">Cancel</button>
-			<button type="button" class="cqp-btn btn-space-last">Send for Approved</button>
-					</td>
-					<td>
-						<button type="button" class="cqp-btn btn-space-last">Print</button>
-			<button type="button" class="cqp-btn btn-space-last">Reject</button>
-					</td>
-					<td>
-						<button type="button" class="cqp-btn btn-space-last">Close</button>
-			<button type="button" class="cqp-btn btn-space-last">Inactivate</button>
-					</td>
-					<td>
-						<button (click)="addUpdateImages()" type="button" class="cqp-btn btn-space-last" style="margin-bottom: 33px;">Add/Update Image</button>
-					</td>
-				</tr>
-	</table>
-						
-		</div>
-
-	</div>
+    </div>
 </form>
-
