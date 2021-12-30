@@ -76,6 +76,8 @@ import { BillOfMaterialsComponent } from './audit-trail/bill-of-materials/bill-o
 import { ChartsModule, ThemeService } from 'ng2-charts';
 import { AlertService } from './service/alert.service';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
+import { AboutComponent } from './about/about.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -131,7 +133,8 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
     ProposedUxComponent,
     DialogContentExampleDialog,
     CustomDateFormat1, 
-    CustomDateFormat2
+    CustomDateFormat2, 
+    AboutComponent, MainComponent
    
   ],
   

@@ -59,69 +59,77 @@ import { CallInComponent } from './audit-trail/call-in/call-in.component';
 import { CategoryComponent } from './audit-trail/category/category.component';
 import { TransferPartListComponent } from './audit-trail/transfer-part-list/transfer-part-list.component';
 import { VoucherComponent } from './audit-trail/voucher/voucher.component';
+import { AboutComponent } from './about/about.component';
+import { MainComponent } from './main/main.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'tplitems', component: TPLItemListComponent },
-  { path: 'add', component: CreateTPLItemComponent },
-  { path: 'search', component: SearchTPLItemComponent },
-  { path: 'table', component: TPLItemTableComponent },
-  { path: 'update/:id', component: UpdateTPLItemComponent },
-  { path: 'details/:id', component: TPLItemDetailsComponent },
-  { path: 'part-override', component: PartOverrideComponent },
-  { path: 'proposed-ux', component: ProposedUxComponent },
-   
+  { path: '', component: MainComponent ,
+  children:[
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'tplitems', component: TPLItemListComponent },
+    { path: 'add', component: CreateTPLItemComponent },
+    { path: 'search', component: SearchTPLItemComponent },
+    { path: 'table', component: TPLItemTableComponent },
+    { path: 'update/:id', component: UpdateTPLItemComponent },
+    { path: 'details/:id', component: TPLItemDetailsComponent },
+    { path: 'part-override', component: PartOverrideComponent },
+    { path: 'proposed-ux', component: ProposedUxComponent },
+     
+    
+    
+    { path: 'add-new-wrp', component: AddNewWrpComponent },
+    { path: 'wrp-home', component: WrpHomeComponent },
+    { path: 'view-current-wrp-voucher', component: ViewCurrentWrpVoucherComponent },
+    { path: 'wrp-summary-edit', component: WrpSummaryEditComponent },
+    { path: 'wrp-voucher-create', component: WrpVoucherCreateComponent },
+    { path: 'voucher-tracking-data', component: VoucherTrackingDataComponent },
+    { path: 'view-historical-wrp-voucher', component: ViewHistoricalWrpVoucherComponent },
+    { path: 'assign-mtc', component: AssignMtcComponent },
+    { path: 'set-criteria', component: SetCriteriaComponent },
+    { path: 'add-update-images', component: AddUpdateImagesComponent },
+    { path: 'manual-voucher-data-upload', component: ManualVoucherDataUploadComponent },
+    { path: 'wrp-voucher-detail', component: WrpVoucherDetailComponent },
+    
+    { path: 'home', component: HomeComponent },
+    { path: 'user-role-mapping', component: UserRoleMappingComponent },
+    { path: 'cq-supplier-setup', component: CqSupplierSetupComponent },
+    { path: 'supplier-profile', component: SupplierProfileComponent },
+    { path: 'labor-handling', component: LaborHandlingComponent },
+    
+    { path: 'call-in-part-historical', component: HistoricalComponent },
+    { path: 'call-in-part-active', component: ActiveComponent },
+    { path: 'create-request', component: CreateRequestComponent },
+    
+    { path: 'transfer-part-current', component: CurrentComponent },
+    { path: 'transfer-part-historical', component: TplHistoricalComponent },
+    
+    { path: 'current-voucher', component: CurrentVoucherComponent },
+    { path: 'historical-voucher', component: HistoricalVoucherComponent },
+    
+    { path: 'daily-warranty-claim', component: DailyWarrantyClaimsComponent },
+    { path: 'warranty-reports', component: WarrantyReportsComponent },
+    
+    { path: 'block-parts', component: BlockPartsComponent },
+    { path: 'honda-holiday', component: HondaHolidayComponent },
+    { path: 'manage-bom', component: ManageBomComponent },
+    { path: 'manage-categories', component: ManageCategoriesComponent },
+    { path: 'manage-message-center', component: ManageMessageCenterComponent },
+    { path: 'manage-part-cost', component: ManagePartCostComponent },
+    { path: 'shipping-cost', component: ShippingCostComponent },
+    { path: 'wrp-updates', component: WrpUpdatesComponent },
+    
+    { path: 'audit-trail-administration', component: AdministrationComponent },
+    { path: 'audit-trail-bom', component: BillOfMaterialsComponent },
+    { path: 'call-in', component: CallInComponent },
+    { path: 'audit-trail-category', component: CategoryComponent },
+    { path: 'audit-trail-transfer-part-list', component: TransferPartListComponent },
+    { path: 'audit-trail-voucher', component: VoucherComponent },
+  ]
+  },
   
-  
-  { path: 'add-new-wrp', component: AddNewWrpComponent },
-  { path: 'wrp-home', component: WrpHomeComponent },
-  { path: 'view-current-wrp-voucher', component: ViewCurrentWrpVoucherComponent },
-  { path: 'wrp-summary-edit', component: WrpSummaryEditComponent },
-  { path: 'wrp-voucher-create', component: WrpVoucherCreateComponent },
-  { path: 'voucher-tracking-data', component: VoucherTrackingDataComponent },
-  { path: 'view-historical-wrp-voucher', component: ViewHistoricalWrpVoucherComponent },
-  { path: 'assign-mtc', component: AssignMtcComponent },
-  { path: 'set-criteria', component: SetCriteriaComponent },
-  { path: 'add-update-images', component: AddUpdateImagesComponent },
-  { path: 'manual-voucher-data-upload', component: ManualVoucherDataUploadComponent },
-  { path: 'wrp-voucher-detail', component: WrpVoucherDetailComponent },
-  
-  { path: 'home', component: HomeComponent },
-  { path: 'user-role-mapping', component: UserRoleMappingComponent },
-  { path: 'cq-supplier-setup', component: CqSupplierSetupComponent },
-  { path: 'supplier-profile', component: SupplierProfileComponent },
-  { path: 'labor-handling', component: LaborHandlingComponent },
-  
-  { path: 'call-in-part-historical', component: HistoricalComponent },
-  { path: 'call-in-part-active', component: ActiveComponent },
-  { path: 'create-request', component: CreateRequestComponent },
-  
-  { path: 'transfer-part-current', component: CurrentComponent },
-  { path: 'transfer-part-historical', component: TplHistoricalComponent },
-  
-  { path: 'current-voucher', component: CurrentVoucherComponent },
-  { path: 'historical-voucher', component: HistoricalVoucherComponent },
-  
-  { path: 'daily-warranty-claim', component: DailyWarrantyClaimsComponent },
-  { path: 'warranty-reports', component: WarrantyReportsComponent },
-  
-  { path: 'block-parts', component: BlockPartsComponent },
-  { path: 'honda-holiday', component: HondaHolidayComponent },
-  { path: 'manage-bom', component: ManageBomComponent },
-  { path: 'manage-categories', component: ManageCategoriesComponent },
-  { path: 'manage-message-center', component: ManageMessageCenterComponent },
-  { path: 'manage-part-cost', component: ManagePartCostComponent },
-  { path: 'shipping-cost', component: ShippingCostComponent },
-  { path: 'wrp-updates', component: WrpUpdatesComponent },
-  
-  { path: 'audit-trail-administration', component: AdministrationComponent },
-  { path: 'audit-trail-bom', component: BillOfMaterialsComponent },
-  { path: 'call-in', component: CallInComponent },
-  { path: 'audit-trail-category', component: CategoryComponent },
-  { path: 'audit-trail-transfer-part-list', component: TransferPartListComponent },
-  { path: 'audit-trail-voucher', component: VoucherComponent },
-  
+ 
+  { path: 'about', component: AboutComponent , data:{header:false} },
   
 ];
 
