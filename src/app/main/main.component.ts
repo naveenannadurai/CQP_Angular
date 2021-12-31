@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,7 +10,7 @@ export class MainComponent  {
 
  
 	constructor(private router: Router) { }
-
+	@ViewChild('scrollMe',{static:true}) private myScrollContainer: ElementRef;
 	todayDate: Date = new Date();
 
 	//dateFilter = (d: Date): boolean => {
@@ -193,10 +193,10 @@ export class MainComponent  {
 			behavior: 'smooth',
 		});
 	}
-	openWindow() {
-		window.open('about', '_blank', 'location=yes,height=270,width=800,scrollbars=yes,status=yes');
-	}
-
+	
+	gotoBottom() {
+        window.scrollTo(0,document.body.scrollHeight);             
+    }
 	moveToSelectedTab($event) {
 		var tabName = $event.tab.textLabel;
 		console.log("================ tabName = " + tabName);
@@ -214,5 +214,23 @@ export class MainComponent  {
 move(tabLink){
   this.router.navigate([tabLink]);
 }
+
+
+openWindow(xyz:string) {
+	if(xyz.indexOf('privacy')>-1)
+	{
+		window.open(xyz, '_blank', 'location=yes,height=1930,width=763,scrollbars=yes,status=yes');
+	}
+	else if(xyz.indexOf('about')>-1)
+	{
+		window.open(xyz, '_blank', 'location=yes,height=270,width=800,scrollbars=yes,status=yes');
+	}
+	else if(xyz.indexOf('terms')>-1)
+	{
+		window.open(xyz, '_blank', 'location=yes,height=2195,width=763,scrollbars=yes,status=yes');
+	}
+	
+}
+
 
 }

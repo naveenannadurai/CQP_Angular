@@ -78,6 +78,8 @@ import { AlertService } from './service/alert.service';
 import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { AboutComponent } from './about/about.component';
 import { MainComponent } from './main/main.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -134,7 +136,7 @@ import { MainComponent } from './main/main.component';
     DialogContentExampleDialog,
     CustomDateFormat1, 
     CustomDateFormat2, 
-    AboutComponent, MainComponent
+    AboutComponent, MainComponent, PrivacyComponent, TermsComponent
    
   ],
   

@@ -61,6 +61,8 @@ import { TransferPartListComponent } from './audit-trail/transfer-part-list/tran
 import { VoucherComponent } from './audit-trail/voucher/voucher.component';
 import { AboutComponent } from './about/about.component';
 import { MainComponent } from './main/main.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
 
 
 const routes: Routes = [
@@ -75,8 +77,6 @@ const routes: Routes = [
     { path: 'details/:id', component: TPLItemDetailsComponent },
     { path: 'part-override', component: PartOverrideComponent },
     { path: 'proposed-ux', component: ProposedUxComponent },
-     
-    
     
     { path: 'add-new-wrp', component: AddNewWrpComponent },
     { path: 'wrp-home', component: WrpHomeComponent },
@@ -130,7 +130,8 @@ const routes: Routes = [
   
  
   { path: 'about', component: AboutComponent , data:{header:false} },
-  
+  { path: 'privacy', component: PrivacyComponent },
+  { path: 'terms', component: TermsComponent },
 ];
 
 @NgModule({

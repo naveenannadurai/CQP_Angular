@@ -1,0 +1,506 @@
+.userid {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.topselnav {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.topnav {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.topnav {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.topnav:visited {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.topnav:hover {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #cc0000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.topnav:active {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #cc0000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.tab {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A.tab {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.tab:visited {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.tab:hover {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.tab:active {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.appnav {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A.appnav {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.appnav:visited {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.appnav:hover {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #cccc99;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.appnav:active {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+.alerthead {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A.alerthead {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.alerthead:visited {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.alerthead:hover {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.alerthead:active {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+.alerttitle {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.alertnolink {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #cc0000;
+    FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.alert {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #cc0000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.alert {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #cc0000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.alert:visited {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #cc0000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.alert:hover {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.alert:active {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #cc0000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+.application {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 16px;
+    COLOR: #990000;
+    FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.pagetitle {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 16px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.colhead {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A.colhead {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A.colhead:hover {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.colheadactive {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A.colheadactive {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A.colheadactive:hover {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.data {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A.data {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: blue;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.data:hover {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #cc0000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+.databig {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 14px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.databigbold {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.databold {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A.databold {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: blue;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.databold:hover {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #cc0000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+.dataviewed {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A.dataviewed {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A.dataviewed:hover {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: blue;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+.datanotviewed {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #cc0000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A.datanotviewed {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: #cc0000;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+A.datanotviewed:hover {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: blue;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+.sectionhead {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 13px;
+    COLOR: #990000;
+    FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.instruction {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #000000;
+    FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.instructionred {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #cc0000;
+    FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.recordnumber {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    COLOR: #990000;
+    FONT-FAMILY: arial, helvetica, sans-serif
+}
+
+.returntotop {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: blue;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+A.returntotop {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 11px;
+    COLOR: blue;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+.footer {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 10px;
+    COLOR: #ffffff;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.para {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: black;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+DT {
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: black;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+DD {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: black;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+OL {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: black;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+UL {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: black;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: none
+}
+
+.bookmark {
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px;
+    COLOR: blue;
+    FONT-FAMILY: arial, helvetica, sans-serif;
+    TEXT-DECORATION: underline
+}
+
+h6 {
+    font-size: 0.87em;
+    font-weight: bold;
+}
