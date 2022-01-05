@@ -81,22 +81,22 @@
 						- Voucher</button>
                 </td>
                 <td align="right">
-                    <a class="returntotop" href="javascript:showHide('ciplAlerts')"><img id="ciplAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a>
+                    <a class="returntotop" (click)="show($event)"><img id="ciplAlertImage" name="vouchertbl" title="Hide" src="../../assets/hide.gif" border="0"></a>
                 </td>
             </tr>
         </tbody>
     </table>
 
     <div id="voucherAlerts" style="display:block;" height="20">
-        <table width="870" align="center" border="1" cellspacing="1" cellpadding="4" class="sortable" preserve_style="row">
+        <table [ngClass]="vouchertbl == true ? 'showtbl' : 'hidetbl'" width="870" align="center" border="1" cellspacing="1" cellpadding="4" class="sortable" preserve_style="row">
+
+            <tr bgcolor="#D3D9A4">
+                <td class="colheadactive" width="500">Supplier</td>
+                <td class="colheadactive">Status</td>
+                <td class="colheadactive">Alert Text</td>
+            </tr>
+
             <tbody>
-                <tr bgcolor="#D3D9A4">
-                    <td class="colheadactive" width="500">Supplier</td>
-                    <td class="colheadactive">Status</td>
-                    <td class="colheadactive">Alert Text</td>
-                </tr>
-
-
                 <tr bgcolor="#F6F3B5" *ngFor="let d of vouchers">
                     <td class="data">{{d.suppNo}} </td>
                     <td class="data">{{d.status}}</td>
@@ -136,22 +136,21 @@
 						Call-In</button>
                 </td>
                 <td align="right">
-                    <a class="returntotop" href="javascript:showHide('ciplAlerts')"><img id="ciplAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a>
+                    <a class="returntotop" (click)="show($event)"><img id="ciplAlertImage" name="callintbl" title="Hide" src="../../assets/hide.gif" border="0"></a>
                 </td>
             </tr>
         </tbody>
     </table>
 
     <div id="ciplAlerts" style="display: block;" height="20">
-        <table width="870" align="center" border="1" cellspacing="1" cellpadding="4" class="sortable" preserve_style="row" id="call-in-table">
+        <table [ngClass]="callintbl == true ? 'showtbl' : 'hidetbl'" width="870" align="center" border="1" cellspacing="1" cellpadding="4" class="sortable" preserve_style="row" id="call-in-table">
+            <tr bgcolor="#D3D9A4">
+                <td class="colheadactive" width="500">Supplier</td>
+                <td class="colheadactive">Status</td>
+                <td class="colheadactive">Alert Text</td>
+            </tr>
+
             <tbody>
-                <tr bgcolor="#D3D9A4">
-                    <td class="colheadactive" width="500">Supplier</td>
-                    <td class="colheadactive">Status</td>
-                    <td class="colheadactive">Alert Text</td>
-                </tr>
-
-
                 <tr bgcolor="#F6F3B5" *ngFor="let d of callIn">
                     <td class="data">{{d.suppNo}} </td>
                     <td class="data">{{d.status}}</td>
@@ -188,21 +187,20 @@
 
                 </td>
                 <td align="right">
-                    <a class="returntotop" href="javascript:showHide('tplAlerts')"><img id="tplAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a>
+                    <a class="returntotop" (click)="show($event)"><img name="tpltbl" id="tplAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a>
                 </td>
             </tr>
         </tbody>
     </table>
     <div id="tplAlerts" style="display: block;" height="20">
-        <table width="870" align="center" border="1" cellspacing="1" cellpadding="4&quot;" class="sortable" preserve_style="row" id="tpl-table">
+        <table [ngClass]="tpltbl == true ? 'showtbl' : 'hidetbl'" width="870" align="center" border="1" cellspacing="1" cellpadding="4&quot;" class="sortable" preserve_style="row" id="tpl-table">
+            <tr bgcolor="#D3D9A4">
+                <td class="colheadactive" width="500">Supplier</td>
+                <td class="colheadactive">Status</td>
+                <td class="colheadactive">Alert Text</td>
+            </tr>
+
             <tbody>
-                <tr bgcolor="#D3D9A4">
-                    <td class="colheadactive" width="500">Supplier</td>
-                    <td class="colheadactive">Status</td>
-                    <td class="colheadactive">Alert Text</td>
-                </tr>
-
-
                 <tr bgcolor="#F6F3B5" *ngFor="let d of tpl">
                     <td class="data">{{d.suppNo}} </td>
                     <td class="data">{{d.status}}</td>
@@ -229,15 +227,14 @@
     </table>
 
     <div id="tplAlerts" style="display: block;" height="20">
-        <table width="870" align="center" border="1" cellspacing="1" cellpadding="4&quot;" class="sortable" preserve_style="row" id="tpl-table">
+        <table [ngClass]="tpltbl == true ? 'showtbl' : 'hidetbl'" width="870" align="center" border="1" cellspacing="1" cellpadding="4&quot;" class="sortable" preserve_style="row" id="tpl-table">
+            <tr bgcolor="#D3D9A4">
+                <td class="colheadactive" width="500">Supplier</td>
+                <td class="colheadactive">Status</td>
+                <td class="colheadactive">Alert Text</td>
+            </tr>
+
             <tbody>
-                <tr bgcolor="#D3D9A4">
-                    <td class="colheadactive" width="500">Supplier</td>
-                    <td class="colheadactive">Status</td>
-                    <td class="colheadactive">Alert Text</td>
-                </tr>
-
-
                 <tr bgcolor="#F6F3B5" *ngFor="let d of tplDue">
                     <td class="data">{{d.suppNo}} </td>
                     <td class="data">{{d.status}}</td>
@@ -274,19 +271,18 @@
 						User</button>
                 </td>
                 <td align="right">
-                    <a class="returntotop" href="javascript:showHide('userAlerts')"><img id="userAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a>
+                    <a class="returntotop" (click)="show($event)"><img name="usertbl" id="userAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a>
                 </td>
             </tr>
         </tbody>
     </table>
     <div id="userAlerts" style="display: block;" height="20">
-        <table width="870" align="center" border="1" cellspacing="1" cellpadding="4" id="user-table">
+        <table [ngClass]="usertbl == true ? 'showtbl' : 'hidetbl'" width="870" align="center" border="1" cellspacing="1" cellpadding="4" id="user-table">
+            <tr bgcolor="#D3D9A4">
+                <td class="colheadactive" colspan="2">Alert Text</td>
+            </tr>
+
             <tbody>
-                <tr bgcolor="#D3D9A4">
-                    <td class="colheadactive" colspan="2">Alert Text</td>
-                </tr>
-
-
                 <tr bgcolor="#F6F3B5" *ngFor="let ww of user">
                     <td class="data" colspan="2">{{ww.itemText}}</td>
                 </tr>
@@ -319,14 +315,14 @@
 						details - Voucher Amounts</button>
                 </td>
                 <td align="right">
-                    <a class="returntotop" href="javascript:showHide('voucherCostAlerts')"><img id="voucherCostAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a>
+                    <a class="returntotop" (click)="show($event)"><img name="vouchercosttbl" id="voucherCostAlertImage" title="Hide" src="../../assets/hide.gif" border="0"></a>
                 </td>
             </tr>
 
         </tbody>
     </table>
     <div id="voucherCostAlerts" style="display: block;" height="20">
-        <table width="870" align="center" border="1" cellspacing="1" cellpadding="4" id="voucher-amount-table">
+        <table [ngClass]="vouchercosttbl == true ? 'showtbl' : 'hidetbl'" width="870" align="center" border="1" cellspacing="1" cellpadding="4" id="voucher-amount-table">
             <tbody>
                 <tr bgcolor="#D3D9A4">
                     <td class="colheadactive" width="40%">Supplier</td>

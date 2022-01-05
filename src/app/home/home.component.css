@@ -11,3 +11,15 @@ tr:nth-child(even) {
 table {
     border-color: white;
 }
+
+.hidetbl {
+    visibility: collapse;
+    opacity: 0;
+    transition: visibility 0s linear 500ms, opacity 1000ms;
+}
+
+.showtbl {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 500ms, opacity 1500ms;
+}

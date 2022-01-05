@@ -38,7 +38,7 @@
         "@progress/kendo-drawing": "^1.0.0",
         "@progress/kendo-theme-default": "latest",
         "angular-material": "^1.2.3",
-        "bootstrap": "^4.4.1",
+        "bootstrap": "^4.6.1",
         "bootstrap-vertical-tabs": "^1.2.2",
         "chart.js": "^2.9.4",
         "file-saver": "^2.0.5",
